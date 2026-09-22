@@ -1,5 +1,4 @@
 """
-
 - This filing uses ruled/bordered tables (visible grid lines), confirmed by
   inspecting the raw PDF with pdfplumber's table finder. That means a
   *lines-based* table detector works reliably here.
@@ -40,9 +39,6 @@ from pathlib import Path
 import pdfplumber
 
 # Data structures
-
-
-
 @dataclass
 class ParsedTable:
     page_number: int         
@@ -70,6 +66,10 @@ class ParsedDocument:
 # Helpers
 # Footer pattern specific to this filing, e.g. "Apple Inc. | Q3 2022 Form 10-Q | 8"
 FOOTER_PATTERN = re.compile(r"[\w .]+\|\s*Q\d\s*\d{4}\s*Form\s*10-Q\s*\|\s*\d+", re.IGNORECASE)
+
+# Heuristic: a "text" line that is stray table content is usually 
+# dominated by currency symbols / numeric tokens with little else.
+_NUMERIC_TOKEN = re.compile(r"[\d,.\$%\(\)—-]+")
 
 
 
