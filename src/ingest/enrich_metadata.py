@@ -78,6 +78,7 @@ def detect_periods(text: str) -> list[str]:
 SECTION_HEADING_PATTERNS = [
     re.compile(r"^Item\s+\d+[A-Z]?\.\s+.+", re.I),
     re.compile(r"^Note\s+\d+\s*[–-]\s*.+", re.I),
+    re.compile(r"^PART\s+[IVX]+", re.I),
     re.compile(
         r"^(CONDENSED CONSOLIDATED (STATEMENTS?|BALANCE SHEETS?) OF .+)$", re.I
     ),
@@ -101,6 +102,7 @@ STATEMENT_TYPE_KEYWORDS = {
     "equity": ["retained earnings", "common stock and additional paid-in capital"],
     "segment": ["reportable segment", "americas", "greater china", "segment operating income"],
     "financial_instruments": ["marketable securities", "derivative instruments", "fair value"],
+    "legal": ["legal proceedings", "litigation", "lawsuit"],
     "mdna": ["management’s discussion", "management's discussion", "forward-looking statements"],
 }
 
