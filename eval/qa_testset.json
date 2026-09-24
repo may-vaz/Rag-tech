@@ -1,0 +1,199 @@
+[
+  {
+    "id": "q1_text_narrative",
+    "type": "text_narrative",
+    "question": "Why did Apple's Mac net sales decrease in the third quarter of 2022 compared to the third quarter of 2021?",
+    "expected_answer_contains": [
+      "MacBook Air",
+      "iMac"
+    ],
+    "expected_pages": [
+      18
+    ],
+    "reference_answer": "Mac net sales decreased due to lower net sales of MacBook Air and iMac, partially offset by higher net sales of MacBook Pro (page 18).",
+    "notes": "Tests plain narrative retrieval (MD&A explanation), not a table lookup."
+  },
+  {
+    "id": "q2_single_table_lookup",
+    "type": "single_table_lookup",
+    "question": "What was Apple's total shareholders' equity as of June 25, 2022?",
+    "expected_answer_contains": [
+      "58,107"
+    ],
+    "expected_pages": [
+      6,
+      7
+    ],
+    "reference_answer": "Apple's total shareholders' equity as of June 25, 2022 was $58,107 million (page 6).",
+    "notes": "Single exact figure from the balance sheet / statement of shareholders' equity."
+  },
+  {
+    "id": "q3_single_table_lookup_cash",
+    "type": "single_table_lookup",
+    "question": "How much cash did Apple hold (not cash equivalents or marketable securities, just cash) as of June 25, 2022?",
+    "expected_answer_contains": [
+      "12,852"
+    ],
+    "expected_pages": [
+      11
+    ],
+    "reference_answer": "Apple held $12,852 million in cash as of June 25, 2022 (page 11).",
+    "notes": "Tests precision on a table with many adjacent similar-looking numbers (Note 3 financial instruments table)."
+  },
+  {
+    "id": "q4_computed_gross_margin",
+    "type": "computed_or_stated_percentage",
+    "question": "What was Apple's total gross margin percentage for the nine months ended June 25, 2022?",
+    "expected_answer_contains": [
+      "43.6"
+    ],
+    "expected_pages": [
+      20
+    ],
+    "reference_answer": "Apple's total gross margin percentage for the nine months ended June 25, 2022 was 43.6% (page 20).",
+    "notes": "Figure is stated directly in the filing (not something the LLM needs to compute itself)."
+  },
+  {
+    "id": "q5_effective_tax_rate",
+    "type": "single_table_lookup",
+    "question": "What was Apple's effective tax rate for the nine months ended June 25, 2022?",
+    "expected_answer_contains": [
+      "16.3"
+    ],
+    "expected_pages": [
+      21
+    ],
+    "reference_answer": "Apple's effective tax rate for the nine months ended June 25, 2022 was 16.3% (page 21).",
+    "notes": "Tests retrieval precision against a nearby, easily-confused figure: the statutory rate (21%) sits right next to it in the same table."
+  },
+  {
+    "id": "q6_exact_instrument_lookup",
+    "type": "exact_match_lookup",
+    "question": "What is the interest rate on Apple's Notes due 2031?",
+    "expected_answer_contains": [
+      "0.500"
+    ],
+    "expected_pages": [
+      1
+    ],
+    "reference_answer": "The interest rate on Apple's Notes due 2031 is 0.500% (page 1).",
+    "notes": "THE key exact-match test from this project's own development: dense-only retrieval failed this; RRF fusion alone still failed it; only the cross-encoder reranker recovered it. This is the headline before/after case for the design doc."
+  },
+  {
+    "id": "q7_ambiguous_period",
+    "type": "ambiguity_trap",
+    "question": "What were Apple's net sales?",
+    "expected_answer_contains": [
+      "82,959",
+      "81,434",
+      "304,182",
+      "282,457"
+    ],
+    "expected_pages": [
+      4,
+      10
+    ],
+    "reference_answer": "Apple's net sales were $82,959 million for the three months ended June 25, 2022, $81,434 million for the three months ended June 26, 2021, $304,182 million for the nine months ended June 25, 2022, and $282,457 million for the nine months ended June 26, 2021 (page 4).",
+    "notes": "Deliberately unscoped. This filing reports net sales across FOUR periods on the same page. A correct answer either lists all four labeled by period, or asks the user which period they mean -- it must NOT silently return only one figure as 'the' answer."
+  },
+  {
+    "id": "q8_out_of_document",
+    "type": "hallucination_refusal",
+    "question": "What were Apple's net sales in Q4 2022?",
+    "expected_answer_contains": [
+      "not",
+      "does not"
+    ],
+    "expected_refusal": true,
+    "expected_pages": [],
+    "reference_answer": "This filing does not report net sales for Q4 2022; it only covers the fiscal quarter ended June 25, 2022 and the nine months then ended.",
+    "notes": "This filing only covers through the fiscal third quarter of 2022. The correct answer is a refusal, not a plausible-sounding fabricated number. This is the single most important test in the whole eval set."
+  },
+  {
+    "id": "q9_out_of_document_competitor",
+    "type": "hallucination_refusal",
+    "question": "How does Apple's gross margin compare to Samsung's for the same quarter?",
+    "expected_answer_contains": [
+      "not",
+      "does not"
+    ],
+    "expected_refusal": true,
+    "expected_pages": [],
+    "reference_answer": "This filing does not report Samsung's gross margin or any comparison between Apple and Samsung.",
+    "notes": "Tests refusal on a question that sounds answerable but requires data (a competitor's filing) this document does not and cannot contain."
+  },
+  {
+    "id": "q10_sum_iphone_mac",
+    "type": "computation_sum",
+    "question": "What was the combined net sales of iPhone and Mac for the third quarter of 2022?",
+    "expected_answer_contains": [
+      "40,665",
+      "7,382",
+      "48,047"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "reference_answer": "iPhone net sales ($40,665 million) plus Mac net sales ($7,382 million) for the third quarter of 2022 equals $48,047 million (page 10).",
+    "notes": "Tests the deterministic fact-engine SUM operation. Verified by hand: 40,665 + 7,382 = 48,047. This was the original failing case that motivated building the fact engine."
+  },
+  {
+    "id": "q11_difference_net_sales",
+    "type": "computation_difference",
+    "question": "What was the difference between Apple net sales in the third quarter of 2022 and the third quarter of 2021?",
+    "expected_answer_contains": [
+      "82,959",
+      "81,434",
+      "1,525"
+    ],
+    "expected_pages": [
+      4
+    ],
+    "reference_answer": "Net sales for the third quarter of 2022 ($82,959 million) minus net sales for the third quarter of 2021 ($81,434 million) equals $1,525 million (page 4).",
+    "notes": "Tests the DIFFERENCE operation and, critically, tests retrieval: the exact needed table ranked 53rd of 95 chunks under plain BM25 for this phrasing before the query-simplification fix. Verified by hand: 82,959 - 81,434 = 1,525."
+  },
+  {
+    "id": "q12_percent_change_stated_first",
+    "type": "computation_percent_change",
+    "question": "What was the percentage change in Apple net sales from the third quarter of 2021 to the third quarter of 2022?",
+    "expected_answer_contains": [
+      "2.0%",
+      "increase"
+    ],
+    "expected_pages": [
+      18
+    ],
+    "reference_answer": "Apple net sales increased by 2.0% during the third quarter of 2022 compared to the third quarter of 2021 (page 18).",
+    "notes": "Tests the STATED-FIRST rule: the filing itself reports this change as 2% (rounded) on page 18/19 -- the correct behavior is to quote that stated figure, NOT compute a more precise but conflicting 1.87% from the raw dollar values. A naive compute-only engine would produce a technically-correct-but-inconsistent-with-the-filing answer here."
+  },
+  {
+    "id": "q13_ratio_iphone_share",
+    "type": "computation_ratio",
+    "question": "What percent of Apple total net sales for the third quarter of 2022 was iPhone?",
+    "expected_answer_contains": [
+      "49",
+      "40,665",
+      "82,959"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "reference_answer": "iPhone net sales ($40,665 million) was 49.0% of total net sales ($82,959 million) for the third quarter of 2022 (page 10).",
+    "notes": "Tests the RATIO operation (\"what percent of X was Y\"), the newest capability added this session. Verified by hand: 40,665 / 82,959 = 49.0%."
+  },
+  {
+    "id": "q14_sum_different_period",
+    "type": "computation_sum",
+    "question": "What was the combined net sales of iPad and Mac for the nine months ended June 25, 2022?",
+    "expected_answer_contains": [
+      "22,118",
+      "28,669",
+      "50,787"
+    ],
+    "expected_pages": [
+      10
+    ],
+    "reference_answer": "iPad net sales ($22,118 million) plus Mac net sales ($28,669 million) for the nine months ended June 25, 2022 equals $50,787 million (page 10).",
+    "notes": "A SECOND sum case using different entities and the nine-month period (not three-month) -- tests that the engine correctly picks the 9-month column, not just the 3-month one it saw in q10. Verified by hand: 22,118 + 28,669 = 50,787."
+  }
+]

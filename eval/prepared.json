@@ -1,0 +1,424 @@
+[
+  {
+    "id": "q1_text_narrative",
+    "type": "text_narrative",
+    "question": "Why did Apple's Mac net sales decrease in the third quarter of 2022 compared to the third quarter of 2021?",
+    "context": "[Periods represented in retrieved excerpts: FY2021_SEPT, Q3_2021, Q3_2022]\n\n---\n\n[Excerpt 1 -- page 18, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.999]\nWatch, Beats products, HomePod mini and accessories. (3) Services net sales include sales from the Company\u2019s advertising, AppleCare, cloud, digital content, payment and other services. Services net sales also include amortization of the deferred value of services bundled in the sales price of certain products. iPhone iPhone net sales increased during the third quarter and first nine months of 2022 compared to the same periods in 2021 due primarily to higher net sales from the Company\u2019s new iPhone models. Mac Mac net sales decreased during the third quarter of 2022 compared to the third quarter of 2021 due primarily to lower net sales of MacBook Air and iMac\u00ae, partially offset by higher net sales of MacBook Pro. Year-over-year Mac net sales increased during the first nine months of 2022 due primarily to higher net sales of MacBook Pro, partially offset by lower net sales of MacBook Air. iPad iPad net sales decreased during the third quarter of 2022 compared to the third quarter of 2021 due primarily to lower net sales of iPad Pro\u00ae, partially offset by higher net sales of all other iPad models.\n\n---\n\n[Excerpt 2 -- page 19, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.991]\nAmericas net sales increased during the first nine months of 2022 due primarily to higher net sales of iPhone, Services and Wearables, Home and Accessories. Europe Europe net sales increased during the third quarter of 2022 compared to the third quarter of 2021 due primarily to higher net sales of iPhone, partially offset by lower net sales of Mac. Year-over-year Europe net sales increased during the first nine months of 2022 due primarily to higher net sales of Services and iPhone. The weakness in foreign currencies relative to the U.S. dollar had a net unfavorable impact on Europe net sales during the third quarter and first nine months of 2022. Greater China Greater China net sales decreased during the third quarter of 2022 compared to the third quarter of 2021 due primarily to lower net sales of iPhone, partially offset by higher net sales of Services. Year-over-year Greater China net sales increased during the first nine months of 2022 due primarily to higher net sales of iPhone and Services. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable impact on Greater China net sales during the third quarter of 2022.\n\n---\n\n[Excerpt 3 -- page 18, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.987]\nthe third quarter of 2021 due primarily to lower net sales of iPad Pro\u00ae, partially offset by higher net sales of all other iPad models. Year-over-year iPad net sales decreased during the first nine months of 2022 due primarily to lower net sales of the 10- inch version of iPad and iPad Air\u00ae, partially offset by higher net sales of iPad mini\u00ae. Wearables, Home and Accessories Wearables, Home and Accessories net sales decreased during the third quarter of 2022 compared to the third quarter of 2021 due primarily to lower net sales of AirPods and Apple Watch. Year-over-year Wearables, Home and Accessories net sales increased during the first nine months of 2022 due primarily to higher net sales of Apple Watch and AirPods. Apple Inc. | Q3 2022 Form 10-Q | 15\n\n---\n\n[Excerpt 4 -- page 17, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.986]\nin 2021, driven primarily by higher net sales of Services and iPhone, partially offset by lower net sales of Mac and Wearables, Home and Accessories. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable impact on all Products and Services net sales during the third quarter of 2022. At the end of the third quarter of 2022, the Company introduced an all-new MacBook Air\u00ae and an updated 13-inch MacBook Pro\u00ae, both powered by the new Apple M2 chip. The Company also announced iOS 16, macOS\u00ae Ventura, iPadOS\u00ae 16 and watchOS\u00ae 9, updates to its operating systems that are expected to be available in the fall of 2022. The Company repurchased $21.7 billion of its common stock and paid dividends and dividend equivalents of $3.8 billion during the third quarter of 2022. Apple Inc. | Q3 2022 Form 10-Q | 14\n\n---\n\n[Excerpt 5 -- page 17, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.981]\nreleases and other information about financial performance, information on environmental, social and corporate governance matters, and details related to the Company\u2019s annual meeting of shareholders. The information contained on the websites referenced in this Form 10-Q is not incorporated by reference into this filing. Further, the Company\u2019s references to website URLs are intended to be inactive textual references only. Business Seasonality and Product Introductions The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand. Additionally, new product and service introductions can significantly impact net sales, cost of sales and operating expenses. The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches. Net sales can also be affected when consumers and distributors anticipate a product introduction. Quarterly Highlights Total net sales increased 2% or $1.5 billion during the third quarter of 2022 compared to the same quarter in 2021, driven primarily by higher net sales of Services and iPhone, partially offset by lower net sales of Mac and Wearables, Home and Accessories.",
+    "engine_answer": null,
+    "retrieved_pages": [
+      17,
+      18,
+      19
+    ],
+    "ranked_pages": [
+      18,
+      19,
+      18,
+      17,
+      17
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      18
+    ],
+    "expected_answer_contains": [
+      "MacBook Air",
+      "iMac"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Mac net sales decreased due to lower net sales of MacBook Air and iMac, partially offset by higher net sales of MacBook Pro (page 18)."
+  },
+  {
+    "id": "q2_single_table_lookup",
+    "type": "single_table_lookup",
+    "question": "What was Apple's total shareholders' equity as of June 25, 2022?",
+    "context": "[Periods represented in retrieved excerpts: FY2021_SEPT, NINEMO_JUN2021, NINEMO_JUN2022, NINE_MO_2021, NINE_MO_2022, Q3_2021, Q3_2022, Q_JUN2021, Q_JUN2022]\n\n---\n\n[Excerpt 1 -- page 7, from 'CONDENSED CONSOLIDATED STATEMENTS OF SHAREHOLDERS\u2019 EQUITY (Unaudited)', relevance score 0.999]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF SHAREHOLDERS\u2019 EQUITY (Unaudited) (In millions, except per share amounts)\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Total shareholders\u2019 equity, beginning balances | 67,399 | 69,178 | 63,090 | 65,339 |\n| Common stock and additional paid-in capital: |  |  |  |  |\n| Common stock and additional paid-in capital: Beginning balances | 61,181 | 54,203 | 57,365 | 50,779 |\n| Common stock and additional paid-in capital: Common stock issued | \u2014 | \u2014 | 593 | 561 |\n| Common stock and additional paid-in capital: Common stock withheld related to net share settlement of equity awards | (1,371) | (1,224) | (2,783) | (2,460) |\n| Common stock and additional paid-in capital: Share-based compensation | 2,305 | 2,010 | 6,940 | 6,109 |\n| Common stock and additional paid-in capital: Ending balances | 62,115 | 54,989 | 62,115 | 54,989 |\n| Retained earnings: |  |  |  |  |\n| Retained earnings: Beginning balances | 12,712 | 15,261 | 5,562 | 14,966 |\n| Retained earnings: Net income | 19,442 | 21,744 | 79,082 | 74,129 |\n| Retained earnings: Dividends and dividend equivalents declared | (3,760) | (3,713) | (11,058) | (10,755) |\n| Retained earnings: Common stock withheld related to net share settlement of equity awards | (1,403) | (1,559) | (3,323) | (3,606) |\n| Retained earnings: Common stock repurchased | (21,702) | (22,500) | (64,974) | (65,501) |\n| Retained earnings: Ending balances | 5,289 | 9,233 | 5,289 | 9,233 |\n| Accumulated other comprehensive income/(loss): |  |  |  |  |\n| Accumulated other comprehensive income/(loss): Beginning balances | (6,494) | (286) | 163 | (406) |\n| Accumulated other comprehensive income/(loss): Other comprehensive income/(loss) | (2,803) | 344 | (9,460) | 464 |\n| Accumulated other comprehensive income/(loss): Ending balances | (9,297) | 58 | (9,297) | 58 |\n| Accumulated other comprehensive income/(loss): Total shareholders\u2019 equity, ending balances | 58,107 | 64,280 | 58,107 | 64,280 |\n| Accumulated other comprehensive income/(loss): Dividends and dividend equivalents declared per share or RSU | 0.23 | 0.22 | 0.67 | 0.63 |\n\n---\n\n[Excerpt 2 -- page 6, from 'CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Unaudited)', relevance score 0.982]\nApple Inc. CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited) (In millions, except number of shares which are reflected in thousands and par value)\n\n|  | June 25, 2022 | September 25, 2021 |\n| --- | --- | --- |\n| ASSETS: |  |  |\n| Current assets: |  |  |\n| Current assets: Cash and cash equivalents | 27,502 | 34,940 |\n| Current assets: Marketable securities | 20,729 | 27,699 |\n| Current assets: Accounts receivable, net | 21,803 | 26,278 |\n| Current assets: Inventories | 5,433 | 6,580 |\n| Current assets: Vendor non-trade receivables | 20,439 | 25,228 |\n| Current assets: Other current assets | 16,386 | 14,111 |\n| Current assets: Total current assets | 112,292 | 134,836 |\n| Non-current assets: |  |  |\n| Non-current assets: Marketable securities | 131,077 | 127,877 |\n| Non-current assets: Property, plant and equipment, net | 40,335 | 39,440 |\n| Non-current assets: Other non-current assets | 52,605 | 48,849 |\n| Non-current assets: Total non-current assets | 224,017 | 216,166 |\n| Non-current assets: Total assets | 336,309 | 351,002 |\n| LIABILITIES AND SHAREHOLDERS\u2019 EQUITY: |  |  |\n| Current liabilities: |  |  |\n| Current liabilities: Accounts payable | 48,343 | 54,763 |\n| Current liabilities: Other current liabilities | 48,811 | 47,493 |\n| Current liabilities: Deferred revenue | 7,728 | 7,612 |\n| Current liabilities: Commercial paper | 10,982 | 6,000 |\n| Current liabilities: Term debt | 14,009 | 9,613 |\n| Current liabilities: Total current liabilities | 129,873 | 125,481 |\n| Non-current liabilities: |  |  |\n| Non-current liabilities: Term debt | 94,700 | 109,106 |\n| Non-current liabilities: Other non-current liabilities | 53,629 | 53,325 |\n| Non-current liabilities: Total non-current liabilities | 148,329 | 162,431 |\n| Non-current liabilities: Total liabilities | 278,202 | 287,912 |\n| Non-current liabilities: Commitments and contingencies |  |  |\n| Shareholders\u2019 equity: |  |  |\n| Shareholders\u2019 equity: Common stock and additional paid-in capital, $0.00001 par value: 50,400,000 shares authorized; 16,095,378 and 16,426,786 shares issued and outstanding, respectively | 62,115 | 57,365 |\n| Shareholders\u2019 equity: Retained earnings | 5,289 | 5,562 |\n| Shareholders\u2019 equity: Accumulated other comprehensive income/(loss) | (9,297) | 163 |\n| Shareholders\u2019 equity: Total shareholders\u2019 equity | 58,107 | 63,090 |\n| Shareholders\u2019 equity: Total liabilities and shareholders\u2019 equity | 336,309 | 351,002 |\n\n---\n\n[Excerpt 3 -- page 14, from 'Note 5 \u2013 Debt', relevance score 0.975]\nCompany had outstanding floating- and fixed-rate notes with varying maturities for an aggregate carrying amount of $108.7 billion and $118.7 billion, respectively (collectively the \u201cNotes\u201d). As of June 25, 2022 and September 25, 2021, the fair value of the Company\u2019s Notes, based on Level 2 inputs, was $101.0 billion and $125.3 billion, respectively. Note 6 \u2013 Shareholders\u2019 Equity Share Repurchase Program During the nine months ended June 25, 2022, the Company repurchased 408 million shares of its common stock for $65.0 billion under a share repurchase program authorized by the Board of Directors (the \u201cProgram\u201d), including 35 million shares delivered under accelerated share repurchase agreements totaling $6.0 billion that were entered into in November 2021. The Program does not obligate the Company to acquire a minimum amount of shares. Under the Program, shares may be repurchased in privately negotiated and/or open market transactions, including under plans complying with Rule 10b5-1 under the Securities Exchange Act of 1934, as amended. Apple Inc. | Q3 2022 Form 10-Q | 11\n\n---\n\n[Excerpt 4 -- page 23, from 'PART II \u2014 OTHER INFORMATION', relevance score 0.630]\n$90 billion of the Company\u2019s common stock under the Program. As of June 25, 2022, total utilization under the April 2022 authorization was $4.1 billion. During the third quarter of 2022, the Company also utilized the final $17.6 billion under the $90 billion Program authorization approved in April 2021. The Program does not obligate the Company to acquire a minimum amount of shares. Under the Program, shares may be repurchased in privately negotiated and/or open market transactions, including under plans complying with Rule 10b5-1 under the Exchange Act. Apple Inc. | Q3 2022 Form 10-Q | 20\n\n---\n\n[Excerpt 5 -- page 10, from 'Note 2 \u2013 Revenue', relevance score 0.370]\nNote 2 \u2013 Revenue Net sales disaggregated by significant products and services for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (in millions): Three Months Ended Nine Months Ended June 25, June 26, June 25, June 26, (1) Products net sales include amortization of the deferred value of unspecified software upgrade rights, which are bundled in the sales price of the respective product. (2) Wearables, Home and Accessories net sales include sales of AirPods\u00ae, Apple TV\u00ae, Apple Watch\u00ae, Beats\u00ae products, HomePod mini\u00ae and accessories. (3) Services net sales include sales from the Company\u2019s advertising, AppleCare\u00ae, cloud, digital content, payment and other services. Services net sales also include amortization of the deferred value of services bundled in the sales price of certain products. (4) Includes $3.1 billion of revenue recognized in the three months ended June 25, 2022 that was included in deferred revenue as of March 26, 2022, $3.0 billion of revenue recognized in the three months ended June 26, 2021 that was included in deferred revenue as of March 27, 2021, $6.3 billion of revenue recognized in the nine months ended June 25, 2022 that was included in deferred revenue as of September 25, 2021, and $5.5 billion of revenue recognized in the nine months ended June 26, 2021 that was included in deferred revenue as of September 26, 2020.",
+    "engine_answer": null,
+    "retrieved_pages": [
+      6,
+      7,
+      10,
+      14,
+      23
+    ],
+    "ranked_pages": [
+      7,
+      6,
+      14,
+      23,
+      10
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      6,
+      7
+    ],
+    "expected_answer_contains": [
+      "58,107"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Apple's total shareholders' equity as of June 25, 2022 was $58,107 million (page 6)."
+  },
+  {
+    "id": "q3_single_table_lookup_cash",
+    "type": "single_table_lookup",
+    "question": "How much cash did Apple hold (not cash equivalents or marketable securities, just cash) as of June 25, 2022?",
+    "context": "[Periods represented in retrieved excerpts: ASOF_JUN2022, FY2021_SEPT, NINEMO_JUN2021, NINEMO_JUN2022, NINE_MO_2021, NINE_MO_2022, Q3_2021, Q3_2022]\n\n---\n\n[Excerpt 1 -- page 6, from 'CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Unaudited)', relevance score 0.988]\nApple Inc. CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited) (In millions, except number of shares which are reflected in thousands and par value)\n\n|  | June 25, 2022 | September 25, 2021 |\n| --- | --- | --- |\n| ASSETS: |  |  |\n| Current assets: |  |  |\n| Current assets: Cash and cash equivalents | 27,502 | 34,940 |\n| Current assets: Marketable securities | 20,729 | 27,699 |\n| Current assets: Accounts receivable, net | 21,803 | 26,278 |\n| Current assets: Inventories | 5,433 | 6,580 |\n| Current assets: Vendor non-trade receivables | 20,439 | 25,228 |\n| Current assets: Other current assets | 16,386 | 14,111 |\n| Current assets: Total current assets | 112,292 | 134,836 |\n| Non-current assets: |  |  |\n| Non-current assets: Marketable securities | 131,077 | 127,877 |\n| Non-current assets: Property, plant and equipment, net | 40,335 | 39,440 |\n| Non-current assets: Other non-current assets | 52,605 | 48,849 |\n| Non-current assets: Total non-current assets | 224,017 | 216,166 |\n| Non-current assets: Total assets | 336,309 | 351,002 |\n| LIABILITIES AND SHAREHOLDERS\u2019 EQUITY: |  |  |\n| Current liabilities: |  |  |\n| Current liabilities: Accounts payable | 48,343 | 54,763 |\n| Current liabilities: Other current liabilities | 48,811 | 47,493 |\n| Current liabilities: Deferred revenue | 7,728 | 7,612 |\n| Current liabilities: Commercial paper | 10,982 | 6,000 |\n| Current liabilities: Term debt | 14,009 | 9,613 |\n| Current liabilities: Total current liabilities | 129,873 | 125,481 |\n| Non-current liabilities: |  |  |\n| Non-current liabilities: Term debt | 94,700 | 109,106 |\n| Non-current liabilities: Other non-current liabilities | 53,629 | 53,325 |\n| Non-current liabilities: Total non-current liabilities | 148,329 | 162,431 |\n| Non-current liabilities: Total liabilities | 278,202 | 287,912 |\n| Non-current liabilities: Commitments and contingencies |  |  |\n| Shareholders\u2019 equity: |  |  |\n| Shareholders\u2019 equity: Common stock and additional paid-in capital, $0.00001 par value: 50,400,000 shares authorized; 16,095,378 and 16,426,786 shares issued and outstanding, respectively | 62,115 | 57,365 |\n| Shareholders\u2019 equity: Retained earnings | 5,289 | 5,562 |\n| Shareholders\u2019 equity: Accumulated other comprehensive income/(loss) | (9,297) | 163 |\n| Shareholders\u2019 equity: Total shareholders\u2019 equity | 58,107 | 63,090 |\n| Shareholders\u2019 equity: Total liabilities and shareholders\u2019 equity | 336,309 | 351,002 |\n\n---\n\n[Excerpt 2 -- page 8, from 'CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited)', relevance score 0.982]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited) (In millions)\n\n|  | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- |\n| Cash, cash equivalents and restricted cash, beginning balances | 35,929 | 39,789 |\n| Operating activities: |  |  |\n| Operating activities: Net income | 79,082 | 74,129 |\n| Adjustments to reconcile net income to cash generated by operating activities: |  |  |\n| Adjustments to reconcile net income to cash generated by operating activities: Depreciation and amortization | 8,239 | 8,295 |\n| Adjustments to reconcile net income to cash generated by operating activities: Share-based compensation expense | 6,760 | 5,961 |\n| Adjustments to reconcile net income to cash generated by operating activities: Deferred income tax expense/(benefit) | 2,756 | (737) |\n| Adjustments to reconcile net income to cash generated by operating activities: Other | (61) | (689) |\n| Changes in operating assets and liabilities: |  |  |\n| Changes in operating assets and liabilities: Accounts receivable, net | 4,561 | (1,316) |\n| Changes in operating assets and liabilities: Inventories | 1,049 | (1,213) |\n| Changes in operating assets and liabilities: Vendor non-trade receivables | 4,789 | 4,892 |\n| Changes in operating assets and liabilities: Other current and non-current assets | (3,289) | (5,899) |\n| Changes in operating assets and liabilities: Accounts payable | (6,108) | (1,786) |\n| Changes in operating assets and liabilities: Deferred revenue | 260 | 1,738 |\n| Changes in operating assets and liabilities: Other current and non-current liabilities | (14) | 463 |\n| Changes in operating assets and liabilities: Cash generated by operating activities | 98,024 | 83,838 |\n| Investing activities: |  |  |\n| Investing activities: Purchases of marketable securities | (70,178) | (94,052) |\n| Investing activities: Proceeds from maturities of marketable securities | 24,203 | 49,880 |\n| Investing activities: Proceeds from sales of marketable securities | 33,609 | 36,745 |\n| Investing activities: Payments for acquisition of property, plant and equipment | (7,419) | (7,862) |\n| Investing activities: Payments made in connection with business acquisitions, net | (169) | (13) |\n| Investing activities: Other | (1,183) | (78) |\n| Investing activities: Cash used in investing activities | (21,137) | (15,380) |\n| Financing activities: |  |  |\n| Financing activities: Payments for taxes related to net share settlement of equity awards | (5,915) | (5,855) |\n| Financing activities: Payments for dividends and dividend equivalents | (11,138) | (10,827) |\n| Financing activities: Repurchases of common stock | (64,974) | (66,223) |\n| Financing activities: Proceeds from issuance of term debt, net | \u2014 | 13,923 |\n| Financing activities: Repayments of term debt | (6,750) | (7,500) |\n| Financing activities: Proceeds from commercial paper, net | 4,970 | 3,022 |\n| Financing activities: Other | (148) | 489 |\n| Financing activities: Cash used in financing activities | (83,955) | (72,971) |\n| Financing activities: Decrease in cash, cash equivalents and restricted cash | (7,068) | (4,513) |\n| Financing activities: Cash, cash equivalents and restricted cash, ending balances | 28,861 | 35,276 |\n| Supplemental cash flow disclosure: |  |  |\n| Supplemental cash flow disclosure: Cash paid for income taxes, net | 12,251 | 18,536 |\n| Supplemental cash flow disclosure: Cash paid for interest | 1,910 | 1,870 |\n\n---\n\n[Excerpt 3 -- page 8, from 'CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited)', relevance score 0.975]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited) (In millions) Nine Months Ended June 25, June 26, 2022 2021 Cash, cash equivalents and restricted cash, beginning balances $ 35,929 $ 39,789 See accompanying Notes to Condensed Consolidated Financial Statements. Apple Inc. | Q3 2022 Form 10-Q | 5\n\n---\n\n[Excerpt 4 -- page 11, from 'Note 3 \u2013 Financial Instruments', relevance score 0.902]\nNote 3 \u2013 Financial Instruments Cash, Cash Equivalents and Marketable Securities The following tables show the Company\u2019s cash, cash equivalents and marketable securities by significant investment category as of June 25, 2022 and\n[All figures in this table are in millions.]\n\n\n|  | Adjusted Cost (as of June 25, 2022) | Unrealized Gains (as of June 25, 2022) | Unrealized Losses (as of June 25, 2022) | Fair Value (as of June 25, 2022) | Cash and Cash Equivalents (as of June 25, 2022) | Current Marketable Securities (as of June 25, 2022) | Non-Current Marketable Securities (as of June 25, 2022) |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Cash | 12,852 | \u2014 | \u2014 | 12,852 | 12,852 | \u2014 | \u2014 |\n| Level 1: |  |  |  |  |  |  |  |\n| Level 1: Money market funds | 10,970 | \u2014 | \u2014 | 10,970 | 10,970 | \u2014 | \u2014 |\n| Level 1: Mutual funds | 252 | \u2014 | (32) | 220 | \u2014 | 220 | \u2014 |\n| Level 1: Subtotal | 11,222 | \u2014 | (32) | 11,190 | 10,970 | 220 | \u2014 |\n| Level 2: |  |  |  |  |  |  |  |\n| Level 2: U.S. Treasury securities | 25,296 | \u2014 | (1,328) | 23,968 | 91 | 3,511 | 20,366 |\n| Level 2: U.S. agency securities | 5,805 | \u2014 | (511) | 5,294 | 4 | 240 | 5,050 |\n| Level 2: Non-U.S. government securities | 17,597 | 6 | (1,023) | 16,580 | \u2014 | 6,336 | 10,244 |\n| Level 2: Certificates of deposit and time deposits | 3,928 | \u2014 | \u2014 | 3,928 | 3,374 | 504 | 50 |\n| Level 2: Commercial paper | 966 | \u2014 | \u2014 | 966 | 209 | 757 | \u2014 |\n| Level 2: Corporate debt securities | 88,912 | 15 | (6,455) | 82,472 | 2 | 8,738 | 73,732 |\n| Level 2: Municipal securities | 978 | \u2014 | (26) | 952 | \u2014 | 203 | 749 |\n| Level 2: Mortgage- and asset-backed securities | 23,058 | \u2014 | (1,952) | 21,106 | \u2014 | 220 | 20,886 |\n| Level 2: Subtotal | 166,540 | 21 | (11,295) | 155,266 | 3,680 | 20,509 | 131,077 |\n| Level 2: Total | 190,614 | 21 | (11,327) | 179,308 | 27,502 | 20,729 | 131,077 |\n\n---\n\n[Excerpt 5 -- page 14, from 'Note 5 \u2013 Debt', relevance score 0.814]\nCompany had outstanding floating- and fixed-rate notes with varying maturities for an aggregate carrying amount of $108.7 billion and $118.7 billion, respectively (collectively the \u201cNotes\u201d). As of June 25, 2022 and September 25, 2021, the fair value of the Company\u2019s Notes, based on Level 2 inputs, was $101.0 billion and $125.3 billion, respectively. Note 6 \u2013 Shareholders\u2019 Equity Share Repurchase Program During the nine months ended June 25, 2022, the Company repurchased 408 million shares of its common stock for $65.0 billion under a share repurchase program authorized by the Board of Directors (the \u201cProgram\u201d), including 35 million shares delivered under accelerated share repurchase agreements totaling $6.0 billion that were entered into in November 2021. The Program does not obligate the Company to acquire a minimum amount of shares. Under the Program, shares may be repurchased in privately negotiated and/or open market transactions, including under plans complying with Rule 10b5-1 under the Securities Exchange Act of 1934, as amended. Apple Inc. | Q3 2022 Form 10-Q | 11",
+    "engine_answer": null,
+    "retrieved_pages": [
+      6,
+      8,
+      11,
+      14
+    ],
+    "ranked_pages": [
+      6,
+      8,
+      8,
+      11,
+      14
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.2,
+    "retrieval_mrr": 0.25,
+    "retrieval_ndcg_at_k": 0.5,
+    "expected_pages": [
+      11
+    ],
+    "expected_answer_contains": [
+      "12,852"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Apple held $12,852 million in cash as of June 25, 2022 (page 11)."
+  },
+  {
+    "id": "q4_computed_gross_margin",
+    "type": "computed_or_stated_percentage",
+    "question": "What was Apple's total gross margin percentage for the nine months ended June 25, 2022?",
+    "context": "[Periods represented in retrieved excerpts: FY2021_SEPT, NINEMO_JUN2021, NINEMO_JUN2022, NINE_MO_2021, NINE_MO_2022, Q3_2021, Q3_2022, Q_JUN2021, Q_JUN2022]\n\n---\n\n[Excerpt 1 -- page 4, from 'PART I \u2014 FINANCIAL INFORMATION', relevance score 0.987]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited) (In millions, except number of shares which are reflected in thousands and per share amounts) Net sales:\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Net sales: Products | 63,355 | 63,948 | 245,241 | 232,309 |\n| Net sales: Services | 19,604 | 17,486 | 58,941 | 50,148 |\n| Net sales: Total net sales | 82,959 | 81,434 | 304,182 | 282,457 |\n| Cost of sales: |  |  |  |  |\n| Cost of sales: Products | 41,485 | 40,899 | 155,084 | 149,476 |\n| Cost of sales: Services | 5,589 | 5,280 | 16,411 | 15,319 |\n| Cost of sales: Total cost of sales | 47,074 | 46,179 | 171,495 | 164,795 |\n| Cost of sales: Gross margin | 35,885 | 35,255 | 132,687 | 117,662 |\n| Operating expenses: |  |  |  |  |\n| Operating expenses: Research and development | 6,797 | 5,717 | 19,490 | 16,142 |\n| Operating expenses: Selling, general and administrative | 6,012 | 5,412 | 18,654 | 16,357 |\n| Operating expenses: Total operating expenses | 12,809 | 11,129 | 38,144 | 32,499 |\n| Operating expenses: Operating income | 23,076 | 24,126 | 94,543 | 85,163 |\n| Operating expenses: Other income/(expense), net | (10) | 243 | (97) | 796 |\n| Operating expenses: Income before provision for income taxes | 23,066 | 24,369 | 94,446 | 85,959 |\n| Operating expenses: Provision for income taxes | 3,624 | 2,625 | 15,364 | 11,830 |\n| Operating expenses: Net income | 19,442 | 21,744 | 79,082 | 74,129 |\n| Earnings per share: |  |  |  |  |\n| Earnings per share: Basic | 1.20 | 1.31 | 4.86 | 4.42 |\n| Earnings per share: Diluted | 1.20 | 1.30 | 4.82 | 4.38 |\n| Shares used in computing earnings per share: |  |  |  |  |\n| Shares used in computing earnings per share: Basic | 16,162,945 | 16,629,371 | 16,277,824 | 16,772,656 |\n| Shares used in computing earnings per share: Diluted | 16,262,203 | 16,781,735 | 16,394,937 | 16,941,527 |\n\n---\n\n[Excerpt 2 -- page 20, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.971]\nGross Margin Products and Services gross margin and gross margin percentage for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (dollars in millions): Gross margin:\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Gross margin: Products | 21,870 | 23,049 | 90,157 | 82,833 |\n| Gross margin: Services | 14,015 | 12,206 | 42,530 | 34,829 |\n| Gross margin: Total gross margin | 35,885 | 35,255 | 132,687 | 117,662 |\n\n---\n\n[Excerpt 3 -- page 20, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.960]\nGross margin percentage:\n[All figures in this table are dollars in millions.]\n\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Gross margin percentage: Products | 34.5% | 36.0% | 36.8% | 35.7% |\n| Gross margin percentage: Services | 71.5% | 69.8% | 72.2% | 69.5% |\n| Gross margin percentage: Total gross margin percentage | 43.3% | 43.3% | 43.6% | 41.7% |\n\n---\n\n[Excerpt 4 -- page 10, from 'Note 2 \u2013 Revenue', relevance score 0.952]\nand $5.5 billion of revenue recognized in the nine months ended June 26, 2021 that was included in deferred revenue as of September 26, 2020. The Company\u2019s proportion of net sales by disaggregated revenue source was generally consistent for each reportable segment in Note 9, \u201cSegment Information and Geographic Data\u201d for the three- and nine-month periods ended June 25, 2022 and June 26, 2021, except in Greater China, where iPhone revenue represented a moderately higher proportion of net sales. As of June 25, 2022 and September 25, 2021, the Company had total deferred revenue of $12.2 billion and $11.9 billion, respectively. As of June 25, 2022, the Company expects 63% of total deferred revenue to be realized in less than a year, 27% within one-to-two years, 8% within two-to-three years and 2% in greater than three years. Apple Inc. | Q3 2022 Form 10-Q | 7\n\n---\n\n[Excerpt 5 -- page 21, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.813]\nOperating Expenses Operating expenses for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (dollars in millions):\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Research and development | 6,797 | 5,717 | 19,490 | 16,142 |\n| Percentage of total net sales | 8% | 7% | 6% | 6% |\n| Selling, general and administrative | 6,012 | 5,412 | 18,654 | 16,357 |\n| Percentage of total net sales | 7% | 7% | 6% | 6% |\n| Total operating expenses | 12,809 | 11,129 | 38,144 | 32,499 |\n| Percentage of total net sales | 15% | 14% | 13% | 12% |",
+    "engine_answer": null,
+    "retrieved_pages": [
+      4,
+      10,
+      20,
+      21
+    ],
+    "ranked_pages": [
+      4,
+      20,
+      20,
+      10,
+      21
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 0.5,
+    "retrieval_ndcg_at_k": 0.6309297535714575,
+    "expected_pages": [
+      20
+    ],
+    "expected_answer_contains": [
+      "43.6"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Apple's total gross margin percentage for the nine months ended June 25, 2022 was 43.6% (page 20)."
+  },
+  {
+    "id": "q5_effective_tax_rate",
+    "type": "single_table_lookup",
+    "question": "What was Apple's effective tax rate for the nine months ended June 25, 2022?",
+    "context": "[Periods represented in retrieved excerpts: FY2021_SEPT, NINEMO_JUN2021, NINEMO_JUN2022, NINE_MO_2021, NINE_MO_2022, Q3_2021, Q3_2022, Q_JUN2021, Q_JUN2022]\n\n---\n\n[Excerpt 1 -- page 5, from 'CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Unaudited)', relevance score 0.953]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Unaudited) (In millions)\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Net income | 19,442 | 21,744 | 79,082 | 74,129 |\n| Other comprehensive income/(loss): |  |  |  |  |\n| Other comprehensive income/(loss): Change in foreign currency translation, net of tax | (721) | 188 | (1,102) | 659 |\n| Change in unrealized gains/losses on derivative instruments, net of tax: |  |  |  |  |\n| Change in unrealized gains/losses on derivative instruments, net of tax: Change in fair value of derivative instruments | 852 | (24) | 1,548 | 4 |\n| Change in unrealized gains/losses on derivative instruments, net of tax: Adjustment for net (gains)/losses realized and included in net income | 121 | 17 | (87) | 593 |\n| Change in unrealized gains/losses on derivative instruments, net of tax: Total change in unrealized gains/losses on derivative instruments | 973 | (7) | 1,461 | 597 |\n| Change in unrealized gains/losses on marketable debt securities, net of tax: |  |  |  |  |\n| Change in unrealized gains/losses on marketable debt securities, net of tax: Change in fair value of marketable debt securities | (3,150) | 217 | (9,959) | (558) |\n| Change in unrealized gains/losses on marketable debt securities, net of tax: Adjustment for net (gains)/losses realized and included in net income | 95 | (54) | 140 | (234) |\n| Change in unrealized gains/losses on marketable debt securities, net of tax: Total change in unrealized gains/losses on marketable debt securities | (3,055) | 163 | (9,819) | (792) |\n| Change in unrealized gains/losses on marketable debt securities, net of tax: Total other comprehensive income/(loss) | (2,803) | 344 | (9,460) | 464 |\n| Change in unrealized gains/losses on marketable debt securities, net of tax: Total comprehensive income | 16,639 | 22,088 | 69,622 | 74,593 |\n\n---\n\n[Excerpt 2 -- page 21, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.925]\nperiods in 2021 due primarily to fair value adjustments and realized losses on marketable securities and higher interest expense, partially offset by foreign exchange gains. Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (dollars in millions): Three Months Ended Nine Months Ended June 25, June 26, June 25, June 26, The Company\u2019s effective tax rate for the third quarter and first nine months of 2022 was lower than the statutory federal income tax rate due primarily to a lower effective tax rate on foreign earnings, tax benefits from share-based compensation and the impact of the U.S. federal R&D tax credit, partially offset by state income taxes. Apple Inc. | Q3 2022 Form 10-Q | 18\n\n---\n\n[Excerpt 3 -- page 21, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.911]\nOI&E decreased during the third quarter and first nine months of 2022 compared to the same periods in 2021 due primarily to fair value adjustments and realized losses on marketable securities and higher interest expense, partially offset by foreign exchange gains. Provision for Income Taxes Provision for income taxes, effective tax rate and statutory federal income tax rate for the three- and nine-month periods ended June 25, 2022 and June 26,\n[All figures in this table are dollars in millions.]\n\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Provision for income taxes | 3,624 | 2,625 | 15,364 | 11,830 |\n| Effective tax rate | 15.7% | 10.8% | 16.3% | 13.8% |\n| Statutory federal income tax rate | 21% | 21% | 21% | 21% |\n\n---\n\n[Excerpt 4 -- page 10, from 'Note 2 \u2013 Revenue', relevance score 0.909]\nNote 2 \u2013 Revenue Net sales disaggregated by significant products and services for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (in millions): Three Months Ended Nine Months Ended June 25, June 26, June 25, June 26, (1) Products net sales include amortization of the deferred value of unspecified software upgrade rights, which are bundled in the sales price of the respective product. (2) Wearables, Home and Accessories net sales include sales of AirPods\u00ae, Apple TV\u00ae, Apple Watch\u00ae, Beats\u00ae products, HomePod mini\u00ae and accessories. (3) Services net sales include sales from the Company\u2019s advertising, AppleCare\u00ae, cloud, digital content, payment and other services. Services net sales also include amortization of the deferred value of services bundled in the sales price of certain products. (4) Includes $3.1 billion of revenue recognized in the three months ended June 25, 2022 that was included in deferred revenue as of March 26, 2022, $3.0 billion of revenue recognized in the three months ended June 26, 2021 that was included in deferred revenue as of March 27, 2021, $6.3 billion of revenue recognized in the nine months ended June 25, 2022 that was included in deferred revenue as of September 25, 2021, and $5.5 billion of revenue recognized in the nine months ended June 26, 2021 that was included in deferred revenue as of September 26, 2020.\n\n---\n\n[Excerpt 5 -- page 4, from 'PART I \u2014 FINANCIAL INFORMATION', relevance score 0.840]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited) (In millions, except number of shares which are reflected in thousands and per share amounts) Net sales:\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Net sales: Products | 63,355 | 63,948 | 245,241 | 232,309 |\n| Net sales: Services | 19,604 | 17,486 | 58,941 | 50,148 |\n| Net sales: Total net sales | 82,959 | 81,434 | 304,182 | 282,457 |\n| Cost of sales: |  |  |  |  |\n| Cost of sales: Products | 41,485 | 40,899 | 155,084 | 149,476 |\n| Cost of sales: Services | 5,589 | 5,280 | 16,411 | 15,319 |\n| Cost of sales: Total cost of sales | 47,074 | 46,179 | 171,495 | 164,795 |\n| Cost of sales: Gross margin | 35,885 | 35,255 | 132,687 | 117,662 |\n| Operating expenses: |  |  |  |  |\n| Operating expenses: Research and development | 6,797 | 5,717 | 19,490 | 16,142 |\n| Operating expenses: Selling, general and administrative | 6,012 | 5,412 | 18,654 | 16,357 |\n| Operating expenses: Total operating expenses | 12,809 | 11,129 | 38,144 | 32,499 |\n| Operating expenses: Operating income | 23,076 | 24,126 | 94,543 | 85,163 |\n| Operating expenses: Other income/(expense), net | (10) | 243 | (97) | 796 |\n| Operating expenses: Income before provision for income taxes | 23,066 | 24,369 | 94,446 | 85,959 |\n| Operating expenses: Provision for income taxes | 3,624 | 2,625 | 15,364 | 11,830 |\n| Operating expenses: Net income | 19,442 | 21,744 | 79,082 | 74,129 |\n| Earnings per share: |  |  |  |  |\n| Earnings per share: Basic | 1.20 | 1.31 | 4.86 | 4.42 |\n| Earnings per share: Diluted | 1.20 | 1.30 | 4.82 | 4.38 |\n| Shares used in computing earnings per share: |  |  |  |  |\n| Shares used in computing earnings per share: Basic | 16,162,945 | 16,629,371 | 16,277,824 | 16,772,656 |\n| Shares used in computing earnings per share: Diluted | 16,262,203 | 16,781,735 | 16,394,937 | 16,941,527 |",
+    "engine_answer": null,
+    "retrieved_pages": [
+      4,
+      5,
+      10,
+      21
+    ],
+    "ranked_pages": [
+      5,
+      21,
+      21,
+      10,
+      4
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 0.5,
+    "retrieval_ndcg_at_k": 0.6309297535714575,
+    "expected_pages": [
+      21
+    ],
+    "expected_answer_contains": [
+      "16.3"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Apple's effective tax rate for the nine months ended June 25, 2022 was 16.3% (page 21)."
+  },
+  {
+    "id": "q6_exact_instrument_lookup",
+    "type": "exact_match_lookup",
+    "question": "What is the interest rate on Apple's Notes due 2031?",
+    "context": "[Periods represented in retrieved excerpts: FY2021_SEPT, NINE_MO_2022, Q3_2021, Q3_2022]\n\n---\n\n[Excerpt 1 -- page 1, relevance score 0.770]\nEmployer Identification No.) of incorporation or organization) One Apple Park Way Cupertino, California 95014 (Address of principal executive offices) (Zip Code) (408) 996-1010 (Registrant\u2019s telephone number, including area code) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading symbol(s) Name of each exchange on which registered Common Stock, $0.00001 par value per share AAPL The Nasdaq Stock Market LLC 1.000% Notes due 2022 \u2014 The Nasdaq Stock Market LLC 1.375% Notes due 2024 \u2014 The Nasdaq Stock Market LLC 0.000% Notes due 2025 \u2014 The Nasdaq Stock Market LLC 0.875% Notes due 2025 \u2014 The Nasdaq Stock Market LLC 1.625% Notes due 2026 \u2014 The Nasdaq Stock Market LLC 2.000% Notes due 2027 \u2014 The Nasdaq Stock Market LLC 1.375% Notes due 2029 \u2014 The Nasdaq Stock Market LLC 3.050% Notes due 2029 \u2014 The Nasdaq Stock Market LLC 0.500% Notes due 2031 \u2014 The Nasdaq Stock Market LLC 3.600% Notes due 2042 \u2014 The Nasdaq Stock Market LLC Indicate by check mark whether the Registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the Registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days.\n\n---\n\n[Excerpt 2 -- page 14, from 'Note 5 \u2013 Debt', relevance score 0.141]\nCompany had outstanding floating- and fixed-rate notes with varying maturities for an aggregate carrying amount of $108.7 billion and $118.7 billion, respectively (collectively the \u201cNotes\u201d). As of June 25, 2022 and September 25, 2021, the fair value of the Company\u2019s Notes, based on Level 2 inputs, was $101.0 billion and $125.3 billion, respectively. Note 6 \u2013 Shareholders\u2019 Equity Share Repurchase Program During the nine months ended June 25, 2022, the Company repurchased 408 million shares of its common stock for $65.0 billion under a share repurchase program authorized by the Board of Directors (the \u201cProgram\u201d), including 35 million shares delivered under accelerated share repurchase agreements totaling $6.0 billion that were entered into in November 2021. The Program does not obligate the Company to acquire a minimum amount of shares. Under the Program, shares may be repurchased in privately negotiated and/or open market transactions, including under plans complying with Rule 10b5-1 under the Securities Exchange Act of 1934, as amended. Apple Inc. | Q3 2022 Form 10-Q | 11",
+    "engine_answer": null,
+    "retrieved_pages": [
+      1,
+      14
+    ],
+    "ranked_pages": [
+      1,
+      14,
+      6,
+      17,
+      12
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.2,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      1
+    ],
+    "expected_answer_contains": [
+      "0.500"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "The interest rate on Apple's Notes due 2031 is 0.500% (page 1)."
+  },
+  {
+    "id": "q7_ambiguous_period",
+    "type": "ambiguity_trap",
+    "question": "What were Apple's net sales?",
+    "context": "[Periods represented in retrieved excerpts: FY2021_SEPT, NINEMO_JUN2021, NINEMO_JUN2022, NINE_MO_2021, NINE_MO_2022, Q3_2021, Q3_2022, Q_JUN2021, Q_JUN2022]\n\n---\n\n[Excerpt 1 -- page 4, from 'PART I \u2014 FINANCIAL INFORMATION', relevance score 0.978]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited) (In millions, except number of shares which are reflected in thousands and per share amounts) Net sales:\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Net sales: Products | 63,355 | 63,948 | 245,241 | 232,309 |\n| Net sales: Services | 19,604 | 17,486 | 58,941 | 50,148 |\n| Net sales: Total net sales | 82,959 | 81,434 | 304,182 | 282,457 |\n| Cost of sales: |  |  |  |  |\n| Cost of sales: Products | 41,485 | 40,899 | 155,084 | 149,476 |\n| Cost of sales: Services | 5,589 | 5,280 | 16,411 | 15,319 |\n| Cost of sales: Total cost of sales | 47,074 | 46,179 | 171,495 | 164,795 |\n| Cost of sales: Gross margin | 35,885 | 35,255 | 132,687 | 117,662 |\n| Operating expenses: |  |  |  |  |\n| Operating expenses: Research and development | 6,797 | 5,717 | 19,490 | 16,142 |\n| Operating expenses: Selling, general and administrative | 6,012 | 5,412 | 18,654 | 16,357 |\n| Operating expenses: Total operating expenses | 12,809 | 11,129 | 38,144 | 32,499 |\n| Operating expenses: Operating income | 23,076 | 24,126 | 94,543 | 85,163 |\n| Operating expenses: Other income/(expense), net | (10) | 243 | (97) | 796 |\n| Operating expenses: Income before provision for income taxes | 23,066 | 24,369 | 94,446 | 85,959 |\n| Operating expenses: Provision for income taxes | 3,624 | 2,625 | 15,364 | 11,830 |\n| Operating expenses: Net income | 19,442 | 21,744 | 79,082 | 74,129 |\n| Earnings per share: |  |  |  |  |\n| Earnings per share: Basic | 1.20 | 1.31 | 4.86 | 4.42 |\n| Earnings per share: Diluted | 1.20 | 1.30 | 4.82 | 4.38 |\n| Shares used in computing earnings per share: |  |  |  |  |\n| Shares used in computing earnings per share: Basic | 16,162,945 | 16,629,371 | 16,277,824 | 16,772,656 |\n| Shares used in computing earnings per share: Diluted | 16,262,203 | 16,781,735 | 16,394,937 | 16,941,527 |\n\n---\n\n[Excerpt 2 -- page 10, from 'Note 2 \u2013 Revenue', relevance score 0.932]\nNote 2 \u2013 Revenue Net sales disaggregated by significant products and services for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (in millions):\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| iPhone | 40,665 | 39,570 | 162,863 | 153,105 |\n| Mac | 7,382 | 8,235 | 28,669 | 26,012 |\n| iPad | 7,224 | 7,368 | 22,118 | 23,610 |\n| Wearables, Home and Accessories | 8,084 | 8,775 | 31,591 | 29,582 |\n| Services | 19,604 | 17,486 | 58,941 | 50,148 |\n| Total net sales | 82,959 | 81,434 | 304,182 | 282,457 |\n\n---\n\n[Excerpt 3 -- page 10, from 'Note 2 \u2013 Revenue', relevance score 0.926]\nNote 2 \u2013 Revenue Net sales disaggregated by significant products and services for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (in millions): Three Months Ended Nine Months Ended June 25, June 26, June 25, June 26, (1) Products net sales include amortization of the deferred value of unspecified software upgrade rights, which are bundled in the sales price of the respective product. (2) Wearables, Home and Accessories net sales include sales of AirPods\u00ae, Apple TV\u00ae, Apple Watch\u00ae, Beats\u00ae products, HomePod mini\u00ae and accessories. (3) Services net sales include sales from the Company\u2019s advertising, AppleCare\u00ae, cloud, digital content, payment and other services. Services net sales also include amortization of the deferred value of services bundled in the sales price of certain products. (4) Includes $3.1 billion of revenue recognized in the three months ended June 25, 2022 that was included in deferred revenue as of March 26, 2022, $3.0 billion of revenue recognized in the three months ended June 26, 2021 that was included in deferred revenue as of March 27, 2021, $6.3 billion of revenue recognized in the nine months ended June 25, 2022 that was included in deferred revenue as of September 25, 2021, and $5.5 billion of revenue recognized in the nine months ended June 26, 2021 that was included in deferred revenue as of September 26, 2020.\n\n---\n\n[Excerpt 4 -- page 17, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.829]\nreleases and other information about financial performance, information on environmental, social and corporate governance matters, and details related to the Company\u2019s annual meeting of shareholders. The information contained on the websites referenced in this Form 10-Q is not incorporated by reference into this filing. Further, the Company\u2019s references to website URLs are intended to be inactive textual references only. Business Seasonality and Product Introductions The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand. Additionally, new product and service introductions can significantly impact net sales, cost of sales and operating expenses. The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches. Net sales can also be affected when consumers and distributors anticipate a product introduction. Quarterly Highlights Total net sales increased 2% or $1.5 billion during the third quarter of 2022 compared to the same quarter in 2021, driven primarily by higher net sales of Services and iPhone, partially offset by lower net sales of Mac and Wearables, Home and Accessories.\n\n---\n\n[Excerpt 5 -- page 18, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.823]\nCertain of the Company\u2019s outsourcing partners, component suppliers and logistical service providers have experienced disruptions during the COVID-19 pandemic, resulting in supply shortages. Similar disruptions could occur in the future. Products and Services Performance The following table shows net sales by category for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 (dollars in millions):\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Change (three months) | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 | Change (nine months) |\n| --- | --- | --- | --- | --- | --- | --- |\n| Net sales by category: |  |  |  |  |  |  |\n| Net sales by category: iPhone | 40,665 | 39,570 | 3% | 162,863 | 153,105 | 6% |\n| Net sales by category: Mac | 7,382 | 8,235 | (10)% | 28,669 | 26,012 | 10% |\n| Net sales by category: iPad | 7,224 | 7,368 | (2)% | 22,118 | 23,610 | (6)% |\n| Net sales by category: Wearables, Home and Accessories | 8,084 | 8,775 | (8)% | 31,591 | 29,582 | 7% |\n| Net sales by category: Services | 19,604 | 17,486 | 12% | 58,941 | 50,148 | 18% |\n| Net sales by category: Total net sales | 82,959 | 81,434 | 2% | 304,182 | 282,457 | 8% |",
+    "engine_answer": null,
+    "retrieved_pages": [
+      4,
+      10,
+      17,
+      18
+    ],
+    "ranked_pages": [
+      4,
+      10,
+      10,
+      17,
+      18
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.6,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      4,
+      10
+    ],
+    "expected_answer_contains": [
+      "82,959",
+      "81,434",
+      "304,182",
+      "282,457"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Apple's net sales were $82,959 million for the three months ended June 25, 2022, $81,434 million for the three months ended June 26, 2021, $304,182 million for the nine months ended June 25, 2022, and $282,457 million for the nine months ended June 26, 2021 (page 4)."
+  },
+  {
+    "id": "q8_out_of_document",
+    "type": "hallucination_refusal",
+    "question": "What were Apple's net sales in Q4 2022?",
+    "context": "[Periods represented in retrieved excerpts: FY2021_SEPT, NINEMO_JUN2021, NINEMO_JUN2022, NINE_MO_2021, NINE_MO_2022, Q3_2021, Q3_2022, Q_JUN2021, Q_JUN2022]\n\n---\n\n[Excerpt 1 -- page 4, from 'PART I \u2014 FINANCIAL INFORMATION', relevance score 0.958]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited) (In millions, except number of shares which are reflected in thousands and per share amounts) Net sales:\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Net sales: Products | 63,355 | 63,948 | 245,241 | 232,309 |\n| Net sales: Services | 19,604 | 17,486 | 58,941 | 50,148 |\n| Net sales: Total net sales | 82,959 | 81,434 | 304,182 | 282,457 |\n| Cost of sales: |  |  |  |  |\n| Cost of sales: Products | 41,485 | 40,899 | 155,084 | 149,476 |\n| Cost of sales: Services | 5,589 | 5,280 | 16,411 | 15,319 |\n| Cost of sales: Total cost of sales | 47,074 | 46,179 | 171,495 | 164,795 |\n| Cost of sales: Gross margin | 35,885 | 35,255 | 132,687 | 117,662 |\n| Operating expenses: |  |  |  |  |\n| Operating expenses: Research and development | 6,797 | 5,717 | 19,490 | 16,142 |\n| Operating expenses: Selling, general and administrative | 6,012 | 5,412 | 18,654 | 16,357 |\n| Operating expenses: Total operating expenses | 12,809 | 11,129 | 38,144 | 32,499 |\n| Operating expenses: Operating income | 23,076 | 24,126 | 94,543 | 85,163 |\n| Operating expenses: Other income/(expense), net | (10) | 243 | (97) | 796 |\n| Operating expenses: Income before provision for income taxes | 23,066 | 24,369 | 94,446 | 85,959 |\n| Operating expenses: Provision for income taxes | 3,624 | 2,625 | 15,364 | 11,830 |\n| Operating expenses: Net income | 19,442 | 21,744 | 79,082 | 74,129 |\n| Earnings per share: |  |  |  |  |\n| Earnings per share: Basic | 1.20 | 1.31 | 4.86 | 4.42 |\n| Earnings per share: Diluted | 1.20 | 1.30 | 4.82 | 4.38 |\n| Shares used in computing earnings per share: |  |  |  |  |\n| Shares used in computing earnings per share: Basic | 16,162,945 | 16,629,371 | 16,277,824 | 16,772,656 |\n| Shares used in computing earnings per share: Diluted | 16,262,203 | 16,781,735 | 16,394,937 | 16,941,527 |\n\n---\n\n[Excerpt 2 -- page 10, from 'Note 2 \u2013 Revenue', relevance score 0.883]\nNote 2 \u2013 Revenue Net sales disaggregated by significant products and services for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (in millions):\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| iPhone | 40,665 | 39,570 | 162,863 | 153,105 |\n| Mac | 7,382 | 8,235 | 28,669 | 26,012 |\n| iPad | 7,224 | 7,368 | 22,118 | 23,610 |\n| Wearables, Home and Accessories | 8,084 | 8,775 | 31,591 | 29,582 |\n| Services | 19,604 | 17,486 | 58,941 | 50,148 |\n| Total net sales | 82,959 | 81,434 | 304,182 | 282,457 |\n\n---\n\n[Excerpt 3 -- page 10, from 'Note 2 \u2013 Revenue', relevance score 0.831]\nNote 2 \u2013 Revenue Net sales disaggregated by significant products and services for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (in millions): Three Months Ended Nine Months Ended June 25, June 26, June 25, June 26, (1) Products net sales include amortization of the deferred value of unspecified software upgrade rights, which are bundled in the sales price of the respective product. (2) Wearables, Home and Accessories net sales include sales of AirPods\u00ae, Apple TV\u00ae, Apple Watch\u00ae, Beats\u00ae products, HomePod mini\u00ae and accessories. (3) Services net sales include sales from the Company\u2019s advertising, AppleCare\u00ae, cloud, digital content, payment and other services. Services net sales also include amortization of the deferred value of services bundled in the sales price of certain products. (4) Includes $3.1 billion of revenue recognized in the three months ended June 25, 2022 that was included in deferred revenue as of March 26, 2022, $3.0 billion of revenue recognized in the three months ended June 26, 2021 that was included in deferred revenue as of March 27, 2021, $6.3 billion of revenue recognized in the nine months ended June 25, 2022 that was included in deferred revenue as of September 25, 2021, and $5.5 billion of revenue recognized in the nine months ended June 26, 2021 that was included in deferred revenue as of September 26, 2020.\n\n---\n\n[Excerpt 4 -- page 17, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.772]\nreleases and other information about financial performance, information on environmental, social and corporate governance matters, and details related to the Company\u2019s annual meeting of shareholders. The information contained on the websites referenced in this Form 10-Q is not incorporated by reference into this filing. Further, the Company\u2019s references to website URLs are intended to be inactive textual references only. Business Seasonality and Product Introductions The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand. Additionally, new product and service introductions can significantly impact net sales, cost of sales and operating expenses. The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches. Net sales can also be affected when consumers and distributors anticipate a product introduction. Quarterly Highlights Total net sales increased 2% or $1.5 billion during the third quarter of 2022 compared to the same quarter in 2021, driven primarily by higher net sales of Services and iPhone, partially offset by lower net sales of Mac and Wearables, Home and Accessories.\n\n---\n\n[Excerpt 5 -- page 18, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.626]\nCertain of the Company\u2019s outsourcing partners, component suppliers and logistical service providers have experienced disruptions during the COVID-19 pandemic, resulting in supply shortages. Similar disruptions could occur in the future. Products and Services Performance The following table shows net sales by category for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 (dollars in millions):\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Change (three months) | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 | Change (nine months) |\n| --- | --- | --- | --- | --- | --- | --- |\n| Net sales by category: |  |  |  |  |  |  |\n| Net sales by category: iPhone | 40,665 | 39,570 | 3% | 162,863 | 153,105 | 6% |\n| Net sales by category: Mac | 7,382 | 8,235 | (10)% | 28,669 | 26,012 | 10% |\n| Net sales by category: iPad | 7,224 | 7,368 | (2)% | 22,118 | 23,610 | (6)% |\n| Net sales by category: Wearables, Home and Accessories | 8,084 | 8,775 | (8)% | 31,591 | 29,582 | 7% |\n| Net sales by category: Services | 19,604 | 17,486 | 12% | 58,941 | 50,148 | 18% |\n| Net sales by category: Total net sales | 82,959 | 81,434 | 2% | 304,182 | 282,457 | 8% |",
+    "engine_answer": null,
+    "retrieved_pages": [
+      4,
+      10,
+      17,
+      18
+    ],
+    "ranked_pages": [
+      4,
+      10,
+      10,
+      17,
+      18
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [],
+    "expected_answer_contains": [
+      "not",
+      "does not"
+    ],
+    "expected_refusal": true,
+    "reference_answer": "This filing does not report net sales for Q4 2022; it only covers the fiscal quarter ended June 25, 2022 and the nine months then ended."
+  },
+  {
+    "id": "q9_out_of_document_competitor",
+    "type": "hallucination_refusal",
+    "question": "How does Apple's gross margin compare to Samsung's for the same quarter?",
+    "context": "[Periods represented in retrieved excerpts: NINEMO_JUN2021, NINEMO_JUN2022, NINE_MO_2021, NINE_MO_2022, Q3_2021, Q3_2022, Q_JUN2021, Q_JUN2022]\n\n---\n\n[Excerpt 1 -- page 7, from 'CONDENSED CONSOLIDATED STATEMENTS OF SHAREHOLDERS\u2019 EQUITY (Unaudited)', relevance score 0.113]\nApple Inc. CONDENSED CONSOLIDATED STATEMENTS OF SHAREHOLDERS\u2019 EQUITY (Unaudited) (In millions, except per share amounts)\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Total shareholders\u2019 equity, beginning balances | 67,399 | 69,178 | 63,090 | 65,339 |\n| Common stock and additional paid-in capital: |  |  |  |  |\n| Common stock and additional paid-in capital: Beginning balances | 61,181 | 54,203 | 57,365 | 50,779 |\n| Common stock and additional paid-in capital: Common stock issued | \u2014 | \u2014 | 593 | 561 |\n| Common stock and additional paid-in capital: Common stock withheld related to net share settlement of equity awards | (1,371) | (1,224) | (2,783) | (2,460) |\n| Common stock and additional paid-in capital: Share-based compensation | 2,305 | 2,010 | 6,940 | 6,109 |\n| Common stock and additional paid-in capital: Ending balances | 62,115 | 54,989 | 62,115 | 54,989 |\n| Retained earnings: |  |  |  |  |\n| Retained earnings: Beginning balances | 12,712 | 15,261 | 5,562 | 14,966 |\n| Retained earnings: Net income | 19,442 | 21,744 | 79,082 | 74,129 |\n| Retained earnings: Dividends and dividend equivalents declared | (3,760) | (3,713) | (11,058) | (10,755) |\n| Retained earnings: Common stock withheld related to net share settlement of equity awards | (1,403) | (1,559) | (3,323) | (3,606) |\n| Retained earnings: Common stock repurchased | (21,702) | (22,500) | (64,974) | (65,501) |\n| Retained earnings: Ending balances | 5,289 | 9,233 | 5,289 | 9,233 |\n| Accumulated other comprehensive income/(loss): |  |  |  |  |\n| Accumulated other comprehensive income/(loss): Beginning balances | (6,494) | (286) | 163 | (406) |\n| Accumulated other comprehensive income/(loss): Other comprehensive income/(loss) | (2,803) | 344 | (9,460) | 464 |\n| Accumulated other comprehensive income/(loss): Ending balances | (9,297) | 58 | (9,297) | 58 |\n| Accumulated other comprehensive income/(loss): Total shareholders\u2019 equity, ending balances | 58,107 | 64,280 | 58,107 | 64,280 |\n| Accumulated other comprehensive income/(loss): Dividends and dividend equivalents declared per share or RSU | 0.23 | 0.22 | 0.67 | 0.63 |\n\n---\n\n[Excerpt 2 -- page 20, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.018]\nGross margin percentage:\n[All figures in this table are dollars in millions.]\n\n\n|  | Three months ended June 25, 2022 | Three months ended June 26, 2021 | Nine months ended June 25, 2022 | Nine months ended June 26, 2021 |\n| --- | --- | --- | --- | --- |\n| Gross margin percentage: Products | 34.5% | 36.0% | 36.8% | 35.7% |\n| Gross margin percentage: Services | 71.5% | 69.8% | 72.2% | 69.5% |\n| Gross margin percentage: Total gross margin percentage | 43.3% | 43.3% | 43.6% | 41.7% |\n\n---\n\n[Excerpt 3 -- page 20, from 'Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations', relevance score 0.018]\nRest of Asia Pacific Rest of Asia Pacific net sales increased during the third quarter of 2022 compared to the third quarter of 2021 due primarily to higher net sales of iPhone and Services. Year-over-year Rest of Asia Pacific net sales increased during the first nine months of 2022 due primarily to higher net sales of Services, iPhone and Mac. The weakness in foreign currencies relative to the U.S. dollar had a net unfavorable impact on Rest of Asia Pacific net sales during the third quarter and first nine months of 2022. Gross Margin Products and Services gross margin and gross margin percentage for the three- and nine-month periods ended June 25, 2022 and June 26, 2021 were as follows (dollars in millions): Three Months Ended Nine Months Ended June 25, June 26, June 25, June 26, Gross margin: Gross margin percentage: Products Gross Margin Products gross margin decreased during the third quarter of 2022 compared to the third quarter of 2021 due primarily to the weakness in foreign currencies relative to the U.S. dollar.",
+    "engine_answer": null,
+    "retrieved_pages": [
+      7,
+      20
+    ],
+    "ranked_pages": [
+      7,
+      20,
+      20,
+      20,
+      20
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [],
+    "expected_answer_contains": [
+      "not",
+      "does not"
+    ],
+    "expected_refusal": true,
+    "reference_answer": "This filing does not report Samsung's gross margin or any comparison between Apple and Samsung."
+  },
+  {
+    "id": "q10_sum_iphone_mac",
+    "type": "computation_sum",
+    "question": "What was the combined net sales of iPhone and Mac for the third quarter of 2022?",
+    "context": null,
+    "engine_answer": "iPhone ($40,665) plus Mac ($7,382) for third quarter of 2022 equals $48,047 (in millions; page 10).",
+    "retrieved_pages": [
+      10
+    ],
+    "ranked_pages": [
+      10
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      10
+    ],
+    "expected_answer_contains": [
+      "40,665",
+      "7,382",
+      "48,047"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "iPhone net sales ($40,665 million) plus Mac net sales ($7,382 million) for the third quarter of 2022 equals $48,047 million (page 10)."
+  },
+  {
+    "id": "q11_difference_net_sales",
+    "type": "computation_difference",
+    "question": "What was the difference between Apple net sales in the third quarter of 2022 and the third quarter of 2021?",
+    "context": null,
+    "engine_answer": "net sales (third quarter of 2022) ($82,959) minus net sales (third quarter of 2021) ($81,434) equals $1,525 (in millions; page 4).",
+    "retrieved_pages": [
+      4
+    ],
+    "ranked_pages": [
+      4
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      4
+    ],
+    "expected_answer_contains": [
+      "82,959",
+      "81,434",
+      "1,525"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Net sales for the third quarter of 2022 ($82,959 million) minus net sales for the third quarter of 2021 ($81,434 million) equals $1,525 million (page 4)."
+  },
+  {
+    "id": "q12_percent_change_stated_first",
+    "type": "computation_percent_change",
+    "question": "What was the percentage change in Apple net sales from the third quarter of 2021 to the third quarter of 2022?",
+    "context": null,
+    "engine_answer": "net sales increased by 2.0% (three months ended; page 18).",
+    "retrieved_pages": [
+      18
+    ],
+    "ranked_pages": [
+      18
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      18
+    ],
+    "expected_answer_contains": [
+      "2.0%",
+      "increase"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "Apple net sales increased by 2.0% during the third quarter of 2022 compared to the third quarter of 2021 (page 18)."
+  },
+  {
+    "id": "q13_ratio_iphone_share",
+    "type": "computation_ratio",
+    "question": "What percent of Apple total net sales for the third quarter of 2022 was iPhone?",
+    "context": null,
+    "engine_answer": "iPhone (40,665) is 49.0% of Total net sales (82,959) (page 10).",
+    "retrieved_pages": [
+      10
+    ],
+    "ranked_pages": [
+      10
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      10
+    ],
+    "expected_answer_contains": [
+      "49",
+      "40,665",
+      "82,959"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "iPhone net sales ($40,665 million) was 49.0% of total net sales ($82,959 million) for the third quarter of 2022 (page 10)."
+  },
+  {
+    "id": "q14_sum_different_period",
+    "type": "computation_sum",
+    "question": "What was the combined net sales of iPad and Mac for the nine months ended June 25, 2022?",
+    "context": null,
+    "engine_answer": "iPad ($22,118) plus Mac ($28,669) for nine months ended June 25, 2022 equals $50,787 (in millions; page 10).",
+    "retrieved_pages": [
+      10
+    ],
+    "ranked_pages": [
+      10
+    ],
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "expected_pages": [
+      10
+    ],
+    "expected_answer_contains": [
+      "22,118",
+      "28,669",
+      "50,787"
+    ],
+    "expected_refusal": false,
+    "reference_answer": "iPad net sales ($22,118 million) plus Mac net sales ($28,669 million) for the nine months ended June 25, 2022 equals $50,787 million (page 10)."
+  }
+]

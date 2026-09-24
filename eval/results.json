@@ -1,0 +1,317 @@
+[
+  {
+    "id": "q1_text_narrative",
+    "type": "text_narrative",
+    "question": "Why did Apple's Mac net sales decrease in the third quarter of 2022 compared to the third quarter of 2021?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.7575757575757575,
+    "answer_exact_match": false,
+    "answer": "Apple's Mac net sales decreased in the third quarter of 2022 compared to the third quarter of 2021 due primarily to lower net sales of MacBook Air and iMac\u00ae, partially offset by higher net sales of MacBook Pro (page 18).",
+    "reference_answer": "Mac net sales decreased due to lower net sales of MacBook Air and iMac, partially offset by higher net sales of MacBook Pro (page 18).",
+    "retrieved_pages": [
+      17,
+      18,
+      19
+    ],
+    "expected_pages": [
+      18
+    ]
+  },
+  {
+    "id": "q2_single_table_lookup",
+    "type": "single_table_lookup",
+    "question": "What was Apple's total shareholders' equity as of June 25, 2022?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 1.0,
+    "answer_exact_match": true,
+    "answer": "Apple's total shareholders' equity as of June 25, 2022 was $58,107 million (page 6).",
+    "reference_answer": "Apple's total shareholders' equity as of June 25, 2022 was $58,107 million (page 6).",
+    "retrieved_pages": [
+      6,
+      7,
+      10,
+      14,
+      23
+    ],
+    "expected_pages": [
+      6,
+      7
+    ]
+  },
+  {
+    "id": "q3_single_table_lookup_cash",
+    "type": "single_table_lookup",
+    "question": "How much cash did Apple hold (not cash equivalents or marketable securities, just cash) as of June 25, 2022?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.2,
+    "retrieval_mrr": 0.25,
+    "retrieval_ndcg_at_k": 0.5,
+    "answer_correct": true,
+    "answer_f1": 1.0,
+    "answer_exact_match": true,
+    "answer": "Apple held $12,852 million in cash as of June 25, 2022 (page 11).",
+    "reference_answer": "Apple held $12,852 million in cash as of June 25, 2022 (page 11).",
+    "retrieved_pages": [
+      6,
+      8,
+      11,
+      14
+    ],
+    "expected_pages": [
+      11
+    ]
+  },
+  {
+    "id": "q4_computed_gross_margin",
+    "type": "computed_or_stated_percentage",
+    "question": "What was Apple's total gross margin percentage for the nine months ended June 25, 2022?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 0.5,
+    "retrieval_ndcg_at_k": 0.6309297535714575,
+    "answer_correct": true,
+    "answer_f1": 1.0,
+    "answer_exact_match": true,
+    "answer": "Apple's total gross margin percentage for the nine months ended June 25, 2022 was 43.6% (page 20).",
+    "reference_answer": "Apple's total gross margin percentage for the nine months ended June 25, 2022 was 43.6% (page 20).",
+    "retrieved_pages": [
+      4,
+      10,
+      20,
+      21
+    ],
+    "expected_pages": [
+      20
+    ]
+  },
+  {
+    "id": "q5_effective_tax_rate",
+    "type": "single_table_lookup",
+    "question": "What was Apple's effective tax rate for the nine months ended June 25, 2022?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.4,
+    "retrieval_mrr": 0.5,
+    "retrieval_ndcg_at_k": 0.6309297535714575,
+    "answer_correct": true,
+    "answer_f1": 1.0,
+    "answer_exact_match": true,
+    "answer": "Apple's effective tax rate for the nine months ended June 25, 2022 was 16.3% (page 21).",
+    "reference_answer": "Apple's effective tax rate for the nine months ended June 25, 2022 was 16.3% (page 21).",
+    "retrieved_pages": [
+      4,
+      5,
+      10,
+      21
+    ],
+    "expected_pages": [
+      21
+    ]
+  },
+  {
+    "id": "q6_exact_instrument_lookup",
+    "type": "exact_match_lookup",
+    "question": "What is the interest rate on Apple's Notes due 2031?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.2,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.7692307692307693,
+    "answer_exact_match": false,
+    "answer": "Apple's Notes due 2031 have an interest rate of 0.500% (page 1).",
+    "reference_answer": "The interest rate on Apple's Notes due 2031 is 0.500% (page 1).",
+    "retrieved_pages": [
+      1,
+      14
+    ],
+    "expected_pages": [
+      1
+    ]
+  },
+  {
+    "id": "q7_ambiguous_period",
+    "type": "ambiguity_trap",
+    "question": "What were Apple's net sales?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 0.6,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": false,
+    "answer_f1": 0.0,
+    "answer_exact_match": false,
+    "answer": "",
+    "reference_answer": "Apple's net sales were $82,959 million for the three months ended June 25, 2022, $81,434 million for the three months ended June 26, 2021, $304,182 million for the nine months ended June 25, 2022, and $282,457 million for the nine months ended June 26, 2021 (page 4).",
+    "retrieved_pages": [
+      4,
+      10,
+      17,
+      18
+    ],
+    "expected_pages": [
+      4,
+      10
+    ]
+  },
+  {
+    "id": "q8_out_of_document",
+    "type": "hallucination_refusal",
+    "question": "What were Apple's net sales in Q4 2022?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": false,
+    "answer_f1": 0.0,
+    "answer_exact_match": false,
+    "answer": "",
+    "reference_answer": "This filing does not report net sales for Q4 2022; it only covers the fiscal quarter ended June 25, 2022 and the nine months then ended.",
+    "retrieved_pages": [
+      4,
+      10,
+      17,
+      18
+    ],
+    "expected_pages": []
+  },
+  {
+    "id": "q9_out_of_document_competitor",
+    "type": "hallucination_refusal",
+    "question": "How does Apple's gross margin compare to Samsung's for the same quarter?",
+    "method": "llm",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.2580645161290323,
+    "answer_exact_match": false,
+    "answer": "This filing does not contain sufficient information in the retrieved context to answer this question.",
+    "reference_answer": "This filing does not report Samsung's gross margin or any comparison between Apple and Samsung.",
+    "retrieved_pages": [
+      7,
+      20
+    ],
+    "expected_pages": []
+  },
+  {
+    "id": "q10_sum_iphone_mac",
+    "type": "computation_sum",
+    "question": "What was the combined net sales of iPhone and Mac for the third quarter of 2022?",
+    "method": "fact_engine",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.7727272727272727,
+    "answer_exact_match": false,
+    "answer": "iPhone ($40,665) plus Mac ($7,382) for third quarter of 2022 equals $48,047 (in millions; page 10).",
+    "reference_answer": "iPhone net sales ($40,665 million) plus Mac net sales ($7,382 million) for the third quarter of 2022 equals $48,047 million (page 10).",
+    "retrieved_pages": [
+      10
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "id": "q11_difference_net_sales",
+    "type": "computation_difference",
+    "question": "What was the difference between Apple net sales in the third quarter of 2022 and the third quarter of 2021?",
+    "method": "fact_engine",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.830188679245283,
+    "answer_exact_match": false,
+    "answer": "net sales (third quarter of 2022) ($82,959) minus net sales (third quarter of 2021) ($81,434) equals $1,525 (in millions; page 4).",
+    "reference_answer": "Net sales for the third quarter of 2022 ($82,959 million) minus net sales for the third quarter of 2021 ($81,434 million) equals $1,525 million (page 4).",
+    "retrieved_pages": [
+      4
+    ],
+    "expected_pages": [
+      4
+    ]
+  },
+  {
+    "id": "q12_percent_change_stated_first",
+    "type": "computation_percent_change",
+    "question": "What was the percentage change in Apple net sales from the third quarter of 2021 to the third quarter of 2022?",
+    "method": "fact_engine",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.45161290322580644,
+    "answer_exact_match": false,
+    "answer": "net sales increased by 2.0% (three months ended; page 18).",
+    "reference_answer": "Apple net sales increased by 2.0% during the third quarter of 2022 compared to the third quarter of 2021 (page 18).",
+    "retrieved_pages": [
+      18
+    ],
+    "expected_pages": [
+      18
+    ]
+  },
+  {
+    "id": "q13_ratio_iphone_share",
+    "type": "computation_ratio",
+    "question": "What percent of Apple total net sales for the third quarter of 2022 was iPhone?",
+    "method": "fact_engine",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.6666666666666667,
+    "answer_exact_match": false,
+    "answer": "iPhone (40,665) is 49.0% of Total net sales (82,959) (page 10).",
+    "reference_answer": "iPhone net sales ($40,665 million) was 49.0% of total net sales ($82,959 million) for the third quarter of 2022 (page 10).",
+    "retrieved_pages": [
+      10
+    ],
+    "expected_pages": [
+      10
+    ]
+  },
+  {
+    "id": "q14_sum_different_period",
+    "type": "computation_sum",
+    "question": "What was the combined net sales of iPad and Mac for the nine months ended June 25, 2022?",
+    "method": "fact_engine",
+    "retrieval_hit": true,
+    "retrieval_precision_at_k": 1.0,
+    "retrieval_mrr": 1.0,
+    "retrieval_ndcg_at_k": 1.0,
+    "answer_correct": true,
+    "answer_f1": 0.7916666666666667,
+    "answer_exact_match": false,
+    "answer": "iPad ($22,118) plus Mac ($28,669) for nine months ended June 25, 2022 equals $50,787 (in millions; page 10).",
+    "reference_answer": "iPad net sales ($22,118 million) plus Mac net sales ($28,669 million) for the nine months ended June 25, 2022 equals $50,787 million (page 10).",
+    "retrieved_pages": [
+      10
+    ],
+    "expected_pages": [
+      10
+    ]
+  }
+]
