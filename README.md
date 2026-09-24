@@ -125,9 +125,10 @@ python3 eval/step1_retrieve.py eval/qa_testset.json data/index
 python3 eval/step2_generate.py eval/prepared.json qwen3:4b
 ```
 
-The 2 failures are kept as error-analysis evidence
-(`eval/results.json`): q8 answered instead of refusing (period
-confusion), q7 retrieved perfectly but generated incompletely.
+The 2 failures were LLM timeouts during the batch run (no answer
+produced, not wrong answers); both answer correctly on re-run
+through main.py, a batch latency-robustness note, not a
+retrieval or answer-quality failure.
 
 ## Known Limitations
 
