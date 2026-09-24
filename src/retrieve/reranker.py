@@ -1,7 +1,6 @@
 """
 reranker.py
-=============
-Stage 6 of the pipeline: takes the candidate pool from hybrid_retriever.py
+takes the candidate pool from hybrid_retriever.py
 (dense + sparse, fused via RRF) and re-scores it with a cross-encoder,
 producing the final top-k chunks that actually get sent to the LLM.
 

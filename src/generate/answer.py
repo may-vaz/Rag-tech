@@ -1,10 +1,5 @@
 """
 answer.py
-==========
-Stage 7, the final stage of the pipeline: takes a user question, runs it
-through retrieve_and_rerank() (hybrid retrieval + cross-encoder rerank),
-filters the result down to genuinely relevant chunks, builds a grounded
-prompt, and calls a local LLM (via Ollama) to produce a cited answer.
 
 WHY A RELEVANCE-SCORE CUTOFF BEFORE GENERATION (not just top-k)
 --------------------------------------------------------------------
@@ -14,19 +9,13 @@ correct chunk scored 0.901, while the next-best candidate scored 0.007
 -- roughly a 130x gap. Blindly sending "top 3" or "top 5" to the LLM
 regardless of score would hand it two near-irrelevant chunks alongside
 the one real answer. This isn't a hypothetical -- it's the literal
-retrieved result set from this project's own evaluation, and it matches
-a well-documented problem for LLM context windows generally: irrelevant
+retrieved result set from this project's own evaluation,irrelevant
 context measurably degrades answer quality even when a genuinely
-correct chunk is also present (often called "context rot" -- performance
-drops as more low-relevance material sits in the context, even before
-the window fills up).
+correct chunk is also present 
 
 The fix here is RELATIVE score filtering, not a fixed count: keep any
 chunk scoring at least RELATIVE_SCORE_CUTOFF of the top chunk's score
-(default 0.15 -- chosen so the query-2 case above cleanly keeps only
-the one real answer, while the query-1 case, where the top 3 scores are
-all within a hair of each other at ~0.998-0.999, keeps all three,
-since they're all genuinely relevant). We always keep at least the #1
+We always keep at least the #1
 result, even if reranking gives everything a low absolute score, so
 the system never sends the LLM literally nothing.
 
@@ -45,21 +34,14 @@ WHY THE PROMPT ALSO REQUIRES A "NOT FOUND" ESCAPE HATCH
 --------------------------------------------------------------
 The single most important anti-hallucination measure for a RAG system
 answering questions about a SPECIFIC document is giving the model
-explicit permission -- really, an instruction -- to say the document
+explicit permission, to say the document
 doesn't contain the answer, rather than filling the gap with outside
-knowledge (e.g. answering from general knowledge about Apple rather
-than THIS filing). This is worth testing directly: this file's demo
-section includes an out-of-document query ("Q4 2022 net sales" --
-this filing only covers through Q3 2022) specifically to verify the
-system correctly refuses rather than hallucinates a plausible-sounding
-number.
+knowledge.
 
-LLM CHOICE -- local, via Ollama
+LLM CHOICE 
 ------------------------------------------------------
 Default model is `qwen3:4b`: at Q4 quantization it's roughly 2.5GB, which
-leaves real headroom on an 8GB-RAM machine (a 7B+ model is tight to
-run at all alongside an OS, browser, and editor, based on this
-project's own experience with the embedding/reranker model sizes), and
+leaves real headroom on an 8GB-RAM machine and
 it's specifically noted for strong instruction-following relative to
 its size -- which matters here because this prompt has non-negotiable
 rules (cite pages, disambiguate periods, refuse when ungrounded). `llama3.2:3b` is

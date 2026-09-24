@@ -1,7 +1,6 @@
 """
 build_dense_index.py
-=====================
-Stage 4a of the pipeline: turns chunks.jsonl into a searchable dense
+turns chunks.jsonl into a searchable dense
 (semantic) vector index.
 
 EMBEDDING MODEL CHOICE -- BAAI/bge-large-en-v1.5
@@ -40,12 +39,6 @@ Why BAAI/bge-large-en-v1.5, specifically, as the replacement:
   (asymmetric query/document encoding), just applied by hand instead of
   via a config the model ships with.
 
-This is a legitimate, documentable engineering trade-off for a
-write-up: "chose retrieval-architecture-appropriate stability over the
-single highest leaderboard score, after reproducing and isolating a
-real environment-specific failure" is exactly the kind of judgment call
-a senior engineer is expected to make and explain, not something to
-hide.
 
 WHY WE DO NOT ALSO EMBED FULL TABLE MARKDOWN
 -----------------------------------------------

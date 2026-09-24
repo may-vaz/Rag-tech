@@ -56,10 +56,9 @@ import json
 import re
 
 
-# --------------------------------------------------------------------------
+
 # Intent detection (superset of llm_client's patterns; ratio + phrasing
 # variants added. Conservative: each needs a specific multi-word shape.)
-# --------------------------------------------------------------------------
 
 _SUM_RE = re.compile(
     r"\b(combined|sum of|total of)\b.*\band\b"
@@ -104,10 +103,7 @@ def detect_intent(question: str) -> str | None:
         return "sum"
     return None
 
-
-# --------------------------------------------------------------------------
 # Facts loading
-# --------------------------------------------------------------------------
 
 def load_facts(path: str) -> list[dict]:
     facts: list[dict] = []
@@ -119,9 +115,8 @@ def load_facts(path: str) -> list[dict]:
     return facts
 
 
-# --------------------------------------------------------------------------
 # Text normalization (mirrors parse-side norm_row_label)
-# --------------------------------------------------------------------------
+
 
 _COMPANY_WORDS = {"apple", "apples", "company", "companies", "firm"}
 _STRUCT_WORDS = {
@@ -172,9 +167,7 @@ def norm_unit(u: str) -> str:
     return m.group(1) if m else (s.strip() or "unspecified")
 
 
-# --------------------------------------------------------------------------
 # Period understanding
-# --------------------------------------------------------------------------
 
 _MONTHS = ("january|february|march|april|may|june|july|august|september|"
            "october|november|december")
@@ -277,9 +270,8 @@ def fact_matches_period(fact: dict, spec: dict) -> bool:
     return True
 
 
-# --------------------------------------------------------------------------
 # Operand parsing (per operation)
-# --------------------------------------------------------------------------
+
 
 _SPLIT_RE = re.compile(r"\s+and\s+|,|\+|\s+plus\s+|&|;|\s+versus\s+|\s+vs\.?\s+", re.I)
 
@@ -302,8 +294,7 @@ def _clean_metric(text: str) -> str:
     return re.sub(r"\s+", " ", t).strip()
 
 
-# Metric nouns a conjunct may carry alongside its entity ("Mac net sales"
-# means the Mac row -- "net"/"sales" add no entity information). Used by
+# Metric nouns a conjunct may carry alongside its entity. Used by
 # row_score's lenient tier, never alone (a conjunct reduced to nothing
 # falls back to the strict tier, so bare "net sales" still prefers the
 # Total row instead of matching everything).
@@ -653,10 +644,7 @@ def parse_ratio(question: str, periods: list[dict]) -> list[dict]:
     return [{"op": "ratio", "conjuncts": [part, whole], "period": periods[0],
              "hint": conjunct_tokens(part + " " + whole)}]
 
-
-# --------------------------------------------------------------------------
 # Row matching + table selection
-# --------------------------------------------------------------------------
 
 def _row_score_one(cset: set[str], stripped: set[str], tset: set[str]) -> int:
     if cset == tset:
@@ -771,10 +759,7 @@ def combinable_units(units: list[str]) -> str | None:
         return None
     return norms[0]
 
-
-# --------------------------------------------------------------------------
 # Stated-first lookups (quote the filing instead of computing)
-# --------------------------------------------------------------------------
 
 def find_stated_change(conj: list[str], spec: dict, facts: list[dict]) -> dict | None:
     """A Change-column fact for the same metric + duration ('2%')."""
@@ -815,10 +800,7 @@ def find_stated_percent(part_conj: list[str], spec: dict, facts: list[dict],
     cands.sort(key=lambda f: ("total" not in f.get("row_norm", ""), f.get("page", 0)))
     return cands[0] if cands else None
 
-
-# --------------------------------------------------------------------------
 # Formatting
-# --------------------------------------------------------------------------
 
 def fmt_num(v: float) -> str:
     if v == int(v):
@@ -862,10 +844,7 @@ def _sources(facts: list[dict]) -> list[dict]:
                     "caption": (f.get("caption") or "")[:120]})
     return out
 
-
-# --------------------------------------------------------------------------
 # Solvers
-# --------------------------------------------------------------------------
 
 def _distinct_cells(chosen: list[dict]) -> bool:
     cells = {(f.get("row_norm"), f.get("col")) for f in chosen}
@@ -1047,10 +1026,7 @@ def solve_ratio(parsed: dict, facts: list[dict]) -> dict | None:
            f"({_pages_str([part['page'], whole['page']])}).")
     return {"answer": ans, "sources": _sources(chosen)}
 
-
-# --------------------------------------------------------------------------
 # Entry point
-# --------------------------------------------------------------------------
 
 _SOLVERS = {"sum": (parse_sum, solve_sum),
             "difference": (parse_pair, solve_difference),

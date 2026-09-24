@@ -1,7 +1,6 @@
 """
 hybrid_retriever.py
-=====================
-Stage 5 of the pipeline: given a query, runs BOTH the dense (semantic)
+given a query, runs BOTH the dense (semantic)
 and sparse (BM25) retrievers built in build_dense_index.py /
 build_sparse_index.py, then fuses their two ranked lists into one final
 ranking using Reciprocal Rank Fusion (RRF).
@@ -59,16 +58,6 @@ fused top ~10-20) that a slower, more accurate cross-encoder can then
 re-score properly -- retrieval's job is recall (don't lose the right
 chunk), reranking's job is precision (put it first).
 
-HOW THIS FILE IMPORTS THE PREVIOUS STAGES
---------------------------------------------
-This project has no setup.py / package install step -- each stage is
-run directly as a script (`python3 src/index/build_dense_index.py ...`).
-To reuse the loader/search functions from the indexing stage without
-duplicating that logic here, we add the `src/` directory to sys.path at
-runtime and import `index.build_dense_index` / `index.build_sparse_index`
-as plain modules. This works with ZERO extra files (no __init__.py
-needed) because Python 3 treats any directory on sys.path as an
-importable "namespace package" automatically.
 """
 
 from __future__ import annotations

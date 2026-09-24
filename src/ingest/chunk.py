@@ -1,13 +1,8 @@
 """
-chunk.py -- narrative + table chunking (fixed table side, identical text side)
-==============================================================================
-TEXT CHUNKING IS UNCHANGED (same splitter, sizes, overlap): text answers
-cannot regress from this file.
+chunk.py -- narrative + table chunking
 
-TABLE CHUNKS consume the new parse output. Three changes, all strictly
-additive signal for retrieval+generation:
 
-1. Row labels are now part of SEARCH text ("Rows: iPhone; Mac; ...").
+1. Row labels are part of SEARCH text ("Rows: iPhone; Mac; ...").
    The old search text (caption + summary + column headers) never named
    the rows, so a BM25 query for "combined iPhone and Mac" had no keyword
    hit on the very table holding both numbers -- one reason computation

@@ -1,91 +1,53 @@
 """
-parse_pdf.py -- PDF parsing + table reconstruction + structured fact extraction
-==============================================================================
-WHAT THIS FILE DOES
--------------------
-Parses the 10-Q PDF into `data/parsed_document.json` (same shape as before,
-plus new keys) and -- NEW -- `data/table_facts.jsonl`, a flat list of
-structured facts (one per table cell: row label, column/period, numeric
-value, units, page). The facts file is what makes arithmetic questions
-("combined iPhone and Mac", "difference between Q3 2022 and Q3 2021")
-answerable *deterministically* (see fact_engine.py): no LLM guessing, no
-wrong-column mistakes, plain Python arithmetic.
+parse_pdf.py 
+PDF parsing, table reconstruction, structured fact extraction.
 
-Everything the old version did is kept: lines-based table detection,
-separate text/table extraction per page, caption zones, stray-line
-cleaning. What changed is HOW rows/headers are reconstructed, driven by
-forensic testing of every table in 2022_Q3_AAPL.pdf with the old code:
+Parses the 10-Q PDF into two artifacts:
 
-FIX 1 -- multi-line leaked first data rows (THE iPhone bug).
-    The old code only inspected the LAST zone line and required it to hold
-    both a text label and the values. But the Note 2 revenue table leaks as
-    TWO lines ("iPhone(R)" / "(1) $ 40,665 $ 39,570 ..."): the value line
-    has no alpha label, so the old detector returned False and the entire
-    iPhone row -- with $40,665 -- was silently dropped (and also stripped
-    from narrative text as "table debris"). Any "combined iPhone and ..."
-    question was therefore unanswerable: the number never reached any
-    chunk. Verified by running the old detector verbatim on the real line.
-    New code: recover_leaked_rows() parses the last zone line as a value
-    line and, when the label part is empty/footnote-only, pulls the label
-    from the line above. General (any table, any row), still fails safe
-    (column-count match required, header/detail lines can never match).
+1. data/parsed_document.json -- pages with narrative text plus reconstructed
+   tables (caption, header row, data rows, fiscal-period headers, units,
+   filing page label for citations). rows[0] is always the header row.
+2. data/table_facts.jsonl -- one flat record per table cell (row label,
+   period header, numeric value, units, page). fact_engine.py computes over
+   this file, so arithmetic answers come from plain Python over exact
+   cells, never from LLM arithmetic.
 
-FIX 2 -- robust $/% cell merging (the misalignment bug).
-    The old merge walked raw cells in strict (a, b) pairs, but pdfplumber
-    emits '' SEPARATOR columns between value groups. Every table with $ on
-    some rows, % columns, or Change columns misaligned: the MD&A category
-    table produced 9 columns instead of 6, gross-margin-% produced 6
-    instead of 4, opex-% produced garbage, share-based-comp produced 6
-    instead of 4 (verified verbatim). New merge_row_values(): drop empties
-    FIRST, normalize "8 %" -> "8%", then pair $ (with next token) and %
-    (with previous token). Correct on every observed pattern.
+Parsing approach (all driven by the actual layout of this filing):
+- Lines-based table detection: this filing uses ruled/bordered tables.
+  Table bounding boxes are located first; narrative text is extracted from
+  outside those boxes so table numbers never leak into prose as garbled
+  tokens, and numeric-heavy stray lines past the boundary are dropped.
+- Caption zones: each table keeps its caption plus the sentence before it,
+  since raw numbers carry no retrievable meaning without knowing what the
+  table represents.
+- Leaked-row recovery: some first data rows leak above the ruled box as
+  two lines (label on one line, values on the next, e.g. the Note 2
+  "iPhone" row). The label is pulled from the line above when the value
+  line carries none, with a column-count match required so header lines
+  can never match.
+- $/% cell merging: value groups arrive separated by empty columns;
+  empties are dropped first, then "$" merges with the following token and
+  "%" with the preceding one ("8 %" -> "8%").
+- Qualified period headers: the same date repeats across 3-month and
+  9-month columns, so headers carry their duration grouping ("Three months
+  ended June 25, 2022", "Change (three months)", ...) plus structured
+  columns[] (date, duration, year, is_change). Duplicate labels are
+  impossible by construction; a header_confidence flag ("date"/"generic")
+  records whether real period labels were recovered.
+- Wrapped-word headers: category tables stack header words vertically
+  ("Number of / RSUs / (in thousands)"); value-token x-positions are
+  clustered into logical columns and each header word assigned to its
+  column, falling back to generic labels if anything looks off.
+- Degenerate-row repair: where a ruled row spans only part of the page
+  width, the row is rebuilt from word positions inside the bbox whenever
+  the label is empty or the value count disagrees with the header.
+- Parent propagation: repeated labels ("Net sales" 5x, once per region)
+  are qualified via "Xxx:" sub-header rows ("Americas: Net sales").
+- Junk filtering + units: the Table of Contents parses as phantom tables
+  and is skipped; units ("in millions") and currency markers are captured
+  per table/column/cell.
 
-FIX 3 -- qualified period headers (the Q3-vs-9M bug).
-    The old header was ["", "June 25, 2022", "June 26, 2021", "June 25,
-    2022", "June 26, 2021"] -- "June 25, 2022" TWICE, with nothing saying
-    which is the 3-month column and which is the 9-month column. Any reader
-    (LLM or code) had to guess positionally. New headers carry the
-    duration grouping: "Three months ended June 25, 2022", "Nine months
-    ended June 25, 2022", "Change (three months)", ... plus structured
-    columns[] with {date, duration, year, is_change}. Duplicate labels are
-    impossible by construction.
-
-FIX 4 -- category-table headers via x-position clustering.
-    RSU / marketable-securities / repurchase / maturity tables have wrapped
-    word headers ("Number of / RSUs / (in thousands)") that the old code
-    gave up on ("Col 1..N" + annotation). New code clusters value-token
-    x-positions into logical columns and assigns each header word to its
-    column, yielding real headers ("Adjusted Cost", "Unrealized Gains",
-    ...). Falls back to generic + annotation if anything looks off.
-
-FIX 5 -- degenerate-row repair from word positions.
-    Two tables have a first ruled row whose ruling only spans part of the
-    page width (segment reconciliation p16: label None + 1 of 4 values;
-    tax table p21: label None + 2 of 4 values). The WORDS are all present
-    inside the bbox, so repair_rows_from_words() rebuilds any grid row
-    whose label is empty or whose value count disagrees with the header.
-
-FIX 6 -- parent propagation for repeated labels.
-    "Net sales" appears 5x in the segment table (once per region),
-    "Products"/"Services" 2x in operations (net sales vs cost of sales),
-    "Marketable securities" 2x in the balance sheet, "Beginning balances"
-    3x in equity. New code tracks "Xxx:" sub-header rows (in-grid and
-    zone-trailing) and qualifies labels ("Americas: Net sales", ...).
-
-FIX 7 -- junk-table filtering (TOC) + units/currency capture.
-    The Table of Contents parses as 2 "tables" that pollute retrieval;
-    now skipped. Units ("in millions", ...) and $ markers are captured per
-    table/column/cell so answers can state scale and currency.
-
-Output 1: parsed_document.json -- same top-level shape as before
-    pages[].tables[] keeps: page_number, table_index_on_page, bbox,
-    caption, rows (rows[0] = header, NEVER a data row), filing_page_label,
-    header_context, header_reconstructed, header_confidence.
-    ADDS: units, units_note, currency, table_kind, columns[], records[],
-    row_kinds[].
-Output 2: table_facts.jsonl -- flat facts for fact_engine.py.
-
-CLI:  python parse_pdf.py [src_pdf] [out_json] [facts_jsonl]
+CLI: python parse_pdf.py [src_pdf] [out_json] [facts_jsonl]
 """
 
 from __future__ import annotations
@@ -99,9 +61,7 @@ from pathlib import Path
 import pdfplumber
 
 
-# --------------------------------------------------------------------------
 # Data structures
-# --------------------------------------------------------------------------
 
 @dataclass
 class ParsedTable:

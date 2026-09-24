@@ -1,15 +1,8 @@
 """
 llm_client.py
-===============
-Deliberately the ONLY file in this project that talks to Ollama, and
-deliberately importing NOTHING beyond the standard library and
-`requests`. No torch, no sentence-transformers, no faiss -- not
-transitively, either. See eval/step2_generate.py, which verifies this
-guarantee at runtime.
 
 HISTORY OF FIXES IN THIS FILE (kept because each was a real, tested
-finding, and understanding why matters more than the current state
-alone):
+finding):
 
 1. Visible reasoning ("First, I need to...") leaking into every answer
    -> fixed with schema-constrained JSON output (Ollama's `format`
@@ -90,16 +83,10 @@ OLLAMA_TIMEOUT_SECONDS = 600         # generous: see step2_generate.py's resumab
 MAX_SELF_CORRECTION_RETRIES = 1     # bounded: only retries when a real problem is detected, so the
                                         # common case pays zero extra latency
 
-# =============================================================================
 # SHARED HELPERS (used by both the lookup path and the computation path)
-# =============================================================================
 
-_NUMBER_RE = re.compile(r"\d+(?:,\d{3})*(?:\.\d+)?%?")  # thousands-grouped numbers, decimals, percents --
-                                                             # deliberately does NOT allow a dangling
-                                                             # trailing comma (a naive \d[\d,]* pattern
-                                                             # would greedily swallow sentence punctuation
-                                                             # like "82,959," -- found by testing against
-                                                             # a real sentence, not assumed)
+_NUMBER_RE = re.compile(r"\d+(?:,\d{3})*(?:\.\d+)?%?")  # thousands-grouped numbers, decimals, percents deliberately does NOT allow a dangling trailing comma (a naive \d[\d,]* pattern
+                                                             # would greedily swallow sentence punctuation like "82,959," -- found by testing against a real sentence, not assumed)
 
 
 def strip_thinking(text: str) -> str:
@@ -298,7 +285,6 @@ def _post_chat(messages: list[dict], model: str, schema: dict) -> str:
     return data["message"]["content"]
 
 
-# =============================================================================
 # STAGE (a): DETECTING that a question needs arithmetic -- pure Python,
 # no LLM call. General phrase patterns, not hardcoded to any specific
 # number, label, or document. Deliberately conservative: each pattern
@@ -308,7 +294,7 @@ def _post_chat(messages: list[dict], model: str, schema: dict) -> str:
 # percentage" or "total shareholders' equity", which must NOT be
 # rerouted into the computation path; verified against this project's
 # own already-working test questions before shipping this).
-# =============================================================================
+
 
 _SUM_PATTERN = re.compile(r"\b(combined|sum of|total of)\b.*\band\b", re.I)
 _DIFFERENCE_PATTERN = re.compile(r"\b(difference between|difference in)\b", re.I)
@@ -349,11 +335,7 @@ def _extract_question_text(user_prompt: str) -> str:
         return user_prompt.split("QUESTION:", 1)[-1].strip()
     return user_prompt
 
-
-# =============================================================================
-# LOOKUP PATH -- unchanged from the version that already correctly
-# answered 8 of 9 real eval questions. Simple, flat, two-field schema.
-# =============================================================================
+# LOOKUP PATH 
 
 SYSTEM_PROMPT = """You are a financial document assistant answering questions about a single \
 SEC filing (Apple Inc.'s Form 10-Q). You are given retrieved excerpts from that filing as CONTEXT.
@@ -643,10 +625,7 @@ def _call_computation(user_prompt: str, operation: str, model: str) -> str:
     return answer_text or INSUFFICIENT_EVIDENCE_MESSAGE
 
 
-# =============================================================================
 # PUBLIC ENTRY POINT
-# =============================================================================
-
 
 def call_ollama(system_prompt: str, user_prompt: str, model: str = OLLAMA_MODEL) -> str:
     """

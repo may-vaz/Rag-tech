@@ -1,30 +1,6 @@
 """
 answer_integration.py -- engine-first routing for answer.py (COMPLETE wiring)
-==============================================================================
-Your existing answer.py / llm_client.py DO NOT need rewrites. Add this one
-routing block at the top of your answer path:
 
-    from fact_engine import try_answer
-    from answer_integration import FACTS_PATH
-
-    def answer_question(question, ...):          # your existing entry point
-        # NEW: deterministic computation first (pure function, ~ms, no LLM).
-        # Returns None for anything it cannot prove -- text answers, single
-        # lookups, and ambiguous cases fall through untouched.
-        facts = load_facts_once(FACTS_PATH)      # cache in memory; see below
-        hit = try_answer(question, facts)
-        if hit is not None:
-            return format_engine_hit(hit)        # or your Answer object
-        # ... your existing retrieve -> build_context -> llm path, unchanged
-
-That is the entire change to the query path. Everything below is the
-supporting code (caching + formatting), complete and ready to import.
-
-The old _compute_result (regex arithmetic over retrieved chunks) should be
-DELETED once this is wired: the engine subsumes it, and leaving both live
-means two code paths can disagree. Text retrieval, direct-figure
-extraction, and percentage extraction are unaffected -- the engine returns
-None for all of them by construction (no op words -> no intent).
 """
 from __future__ import annotations
 
